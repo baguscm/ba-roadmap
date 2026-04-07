@@ -1,0 +1,45 @@
+---
+title: Payment Collection
+domain: ecommerce
+---
+
+# Payment Collection
+
+Managing the "Order to Cash" finale, specifically "Process Customer Payments" in the APQC framework.
+
+## Node Knowledge: The Process Lifecycle
+1. **Authorization:** Reserving funds on the customer's card at the time of order placement.
+2. **Capture:** Actually withdrawing the funds once the warehouse confirms the item has shipped.
+3. **Settlement:** The payment gateway moving the funds into the merchant's bank account (T+2/T+3).
+4. **Refund/Chargeback:** Handling the reversal of transactions and defending against fraud claims.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Risk Analysis:** Assessing the impact of PCI-DSS compliance and data security.
+*   **Sequence Diagrams:** Mapping the millisecond communication between Gateway, Processor, and Bank.
+*   **Financial Analysis:** Tracking "Interchange Fees" and gateway basis points to optimize margins.
+
+## Typical Deliverables
+
+*   **Payment Flow Sequence Diagram**
+*   **Gateway Error-Code Mapping Document**
+*   **Reconciliation Business Rules**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't "Capture" until you ship. Legally and operationally, it's best practice in e-commerce to only authorize funds at checkout and only execute the capture once the warehouse confirms the box is on the truck.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Stripe:** The gold standard for developer-first payment APIs and global scaling.
+*   **Adyen:** A unified platform for massive enterprises handling cross-channel payments.

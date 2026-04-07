@@ -1,0 +1,45 @@
+---
+title: Risk Assessment & Profiling
+domain: fintech
+---
+
+# Risk Assessment & Profiling
+
+A subset of "Evaluate and Manage Risk" (APQC 11.0), specifically tailored for financial exposures and credit risk.
+
+## Node Knowledge: The Process Lifecycle
+1. **Data Enrichment:** Pulling bureau scores (FICO, TransUnion) and historical bank transaction data.
+2. **Scoring Engine:** Applying weighted business rules to determine a consolidated risk score.
+3. **Risk Classification:** Automating the categorization of a user as Low, Medium, or High risk.
+4. **Ongoing Monitoring:** Re-evaluating the risk profile based on changing spend patterns or credit signals.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Decision Modelling (DMN):** Creating formal notation for complex credit and risk approval logic.
+*   **Business Rules Analysis:** Documenting the "Knock-out" criteria (e.g., debt-to-income > 40%).
+*   **Data Analysis:** Identifying correlations between initial risk classifications and actual default rates.
+
+## Typical Deliverables
+
+*   **Decision Table (Risk Matrix)**
+*   **Credit Score Integration Specification**
+*   **Risk Threshold Rule Set**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware the "Black Box." If your risk engine uses AI, as a BA, you must document "Explainability" requirements. If a customer is rejected, you are often legally required to explain exactly why.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Alloy:** An identity and risk decisioning engine that simplifies complex compliance orchestrations.
+*   **Socure:** Uses predictive analytics and machine learning for highly accurate digital identity and fraud scoring.

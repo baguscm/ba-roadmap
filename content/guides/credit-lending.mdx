@@ -1,0 +1,47 @@
+---
+title: Credit & Lending
+domain: fintech
+---
+
+# Credit & Lending
+
+The **Credit & Lending** node outlines the process of evaluating a borrower's creditworthiness, originating a loan, and managing the repayment lifecycle. In modern FinTech, this process is heavily automated, relying on alternative data sources and machine learning algorithms to make instantaneous credit decisions.
+
+## Node Knowledge: The Lending Lifecycle
+1. **Application & Pre-qualification:** Gathering borrower data and performing a "soft pull" to estimate rates.
+2. **Underwriting & Scoring:** Assessing risk using credit bureau data, banking history, and proprietary models.
+3. **Origination & Funding:** Generating loan agreements, capturing signatures, and disbursing funds to the borrower.
+4. **Servicing & Collections:** Managing monthly amortizations, processing repayments, and handling delinquencies.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with *BABOK®*, this area requires strong **Requirements Elicitation** and **Process Modeling** skills to capture complex financial calculations.
+
+*   **Decision Modeling:** Documenting the strict if/then business rules that determine whether an application is auto-approved, auto-declined, or sent for manual review.
+*   **Data Dictionary Creation:** Defining the exact inputs required for the underwriting engine (e.g., Debt-to-Income ratio, FICO score, monthly cash flow).
+*   **Amortization Schedule Validation:** Working with QA to ensure the system accurately calculates interest and principal splits over the life of the loan.
+
+## Typical Deliverables
+
+*   **Decision Tables:** Matrices outlining interest rate tiers based on specific risk scores.
+*   **Loan Lifecycle State Diagram:** Mapping the status of a loan from `Draft` -> `Funded` -> `Current` -> `Past Due` -> `Charged Off`.
+*   **Compliance Matrix:** Ensuring all Truth in Lending Act (TILA) disclosures are triggered at the correct points in the UI.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!CAUTION]
+> **From the Desk of a Lead Business Analyst**
+> When working on credit products, compliance is not an afterthought; it is the entire product.
+> If your system fails to display the APR correctly, or if an adverse action notice isn't sent automatically upon a decline, your company faces massive regulatory fines. Always involve Legal/Compliance stakeholders in your very first sprint.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Encompass (by ICE Mortgage Technology):** Industry standard for mortgage lending and origination.
+*   **Blend:** A modern, white-label UI framework for multi-product loan originations.
+*   **Canopy Servicing:** An API-first loan management and servicing platform.

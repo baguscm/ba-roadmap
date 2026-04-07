@@ -1,0 +1,42 @@
+---
+title: Finance
+domain: ecommerce
+---
+
+# Finance (General Ledger & Revenue)
+
+According to **APQC**, the Finance domain maps to "Manage Financial Resources." While E-commerce acts as the front-end capability to generate orders, the Finance system is the ultimate ledger of truth for an enterprise. E-commerce platforms must integrate accurately with Finance tools to ensure Revenue Recognition, Tax Compliance, COGS (Cost of Goods Sold) calculation, and ultimately, corporate profitability.
+
+## Node Knowledge: The Financial Lifecycle
+1. **Transaction Capture:** Ingesting every single order, return, discount, and shipping fee from the storefront into the ERP.
+2. **Revenue Recognition:** Following GAAP or IFRS standards to record the revenue *only* when the performance obligation (shipping the item) is met.
+3. **Reconciliation:** Matching the bank deposits exactly against the expected payment gateway settlements.
+4. **General Ledger (GL) Posting:** Finalizing the Debits and Credits into the correct chart of accounts (e.g., "Accounts Receivable", "Sales Tax Liability", "Inventory Asset").
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Data Modeling:** The most critical Finance BA task is building the "GL Mapping Matrix".
+*   **Risk Analysis:** Ensuring the system architecture handles tax compliance logic across multiple international jurisdictions.
+*   **Process Modeling:** Documenting the rigid Month-End Close procedure to ensure automated syncs complete before the books are locked.
+
+## Typical Deliverables
+*   **GL Account Mapping Document:** A massive matrix detailing exactly which journal entry lines get struck for specific events. (e.g., Event: Shipped Order. Debits AR, Credits Revenue, Debits COGS, Credits Inventory).
+*   **Audit Trail Requirements:** Stating exactly what historical user changes must be logged immutably for SOX compliance.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> **Never summarize E-commerce data without permission.**
+> Developers often try to summarize e-commerce daily sales into one massive API call "Daily Sales Journal" to save server load. Finance teams, however, usually need the atomic transactional data (order by order) to run accurate reconciliations against payment processors. BAs must bridge this gap by defining the exact granularity of the financial integration.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Oracle NetSuite / SAP S/4HANA / Workday:** The undisputed heavyweights of enterprise finance. All E-commerce integrations eventually terminate here. 
+*   **Avalara / Vertex:** Specialized "Tax Engines". BAs integrate these via API at the e-commerce checkout to dynamically calculate precise tax rates based on the customer's hyper-local zip code, passing that exact liability calculation into the ERP.

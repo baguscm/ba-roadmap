@@ -1,0 +1,45 @@
+---
+title: Warehouse Operations
+domain: ecommerce
+---
+
+# Warehouse Operations
+
+Relates to "Manage Logistics and Warehousing" (APQC 6.4), focusing on internal storage efficiency and flow.
+
+## Node Knowledge: The Process Lifecycle
+1. **Inventory Slotting:** Placing popular items (fast-movers) closer to packing stations to reduce travel time.
+2. **Replenishment:** Moving stock from "Overstock" bulk storage to "Active Picking" bins.
+3. **Cycle Counting:** Regular, scheduled audits of stock to maintain inventory accuracy without total shutdowns.
+4. **Transfer Orders:** Moving stock between warehouses in a multi-node fulfillment network.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Organization Modelling:** Defining warehouse supervisor vs. warehouse picker roles and permissions.
+*   **Decision Analysis:** Choosing between manual picking vs. automated SOR (Sortation) systems.
+*   **Interface Analysis:** Mapping WMS data (Bin, Lot, Serial) into the ERP for financial ledger updates.
+
+## Typical Deliverables
+
+*   **Bin/Zone Mapping Document**
+*   **Replenishment Trigger Rules Matrix**
+*   **Warehouse Picking Productivity Dashboard Spec**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Slotting is dynamic. As a BA, ensure your system uses sales velocity data to suggest bin moves. What was a top seller in July (swimwear) shouldn't be in the prime picking zone in December.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **HighJump (Körber):** A highly flexible WMS known for its ability to scale with complex warehouse needs.
+*   **Oracle NetSuite WMS:** A built-in solution for NetSuite users that provides real-time mobile inventory control.

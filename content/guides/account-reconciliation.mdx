@@ -1,0 +1,45 @@
+---
+title: Account Reconciliation
+domain: ecommerce
+---
+
+# Account Reconciliation
+
+A key part of "Manage Financial Resources," closing the book on the daily sales activity.
+
+## Node Knowledge: The Process Lifecycle
+1. **Statement Retrieval:** Pulling daily reports from bank accounts and gateways (Stripe/PayPal/Adyen).
+2. **Matching Logic:** Linking one or many bank deposits to individual internal Sales Orders.
+3. **Variance Management:** Determining why the bank received $97 but the order was $100 (Gateway Fees).
+4. **Adjusting Entries:** Automatically booking fees to the correct GL expense ledger.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Interface Analysis:** Mapping bank statement fields into the ERP reconciliation engine.
+*   **Process Modelling:** Automating the daily, high-volume matching and variance logic.
+*   **Stakeholder Collaboration:** Facilitating communication between Treasury and Accounts Receivable.
+
+## Typical Deliverables
+
+*   **Auto-Match Rule Document**
+*   **Bank Feed Field Mapping Spec**
+*   **Variance Threshold Standard Operating Procedure (SOP)**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Gateway fees are the hidden variance. As a BA, ensure your system captures "Gross proceeds" and "Gateway Fee" separately at the point of reconciliation, otherwise your net margin will always be wrong.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **BlackLine:** Specializes in automating the entire financial close and reconciliation cycle.
+*   **Trintech:** High-volume financial transaction matching for global enterprises.

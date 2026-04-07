@@ -1,0 +1,47 @@
+---
+title: Core HR
+domain: hr-payroll
+---
+
+# Core HR
+
+**Core HR** serves as the central system of record for all employee data. It is the architectural foundation upon which all other Human Capital Management (HCM) modules operate. Establishing a robust Core HR system ensures data integrity across organizational structures, compensation grades, and employee life events.
+
+## Node Knowledge: The Core Data Model
+1. **Organizational Structure:** Defining legal entities, departments, cost centers, and supervisory organizations.
+2. **Employee Records:** Managing personally identifiable information, emergency contacts, and demographic data.
+3. **Job & Position Management:** Distinguishing between an abstract "Job Profile" and a specific, funded "Position."
+4. **Benefits Administration:** Managing automated enrollment events (e.g., new hire, open enrollment) and tracking plan participation.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In the *BABOK®* framework, mastering Core HR relies heavily on **Data Modeling** and **Requirements Analysis**.
+
+*   **Entity-Relationship Mapping:** Defining how an employee relates to a position, how a position relates to a department, and how a department rolls up to a legal entity.
+*   **Security & Access Control Definition:** Determining who can view or edit sensitive data (e.g., "Managers can see salaries of direct reports only").
+*   **Business Rules Elicitation:** Capturing the logic governing life events (e.g., "If an employee moves to California, trigger state-specific tax withholding forms").
+
+## Typical Deliverables
+
+*   **Supervisory Org Hierarchy Diagrams:** Visual maps showing reporting lines and department nesting.
+*   **Data Dictionary / Field Matrix:** A comprehensive list of all employee fields, defining which are mandatory, optional, and who owns the data.
+*   **Role-Based Access Control (RBAC) Matrices:** Spreadsheets mapping security roles to specific module permissions.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!WARNING]
+> **From the Desk of a Lead Business Analyst**
+> Be meticulous with Effective Dating. In enterprise HR systems, data doesn't just change; it changes *as of a specific date*.
+> If an employee is promoted on the 15th, the system must maintain the old salary for payroll runs covering the 1st-14th, and apply the new salary from the 15th onward. If you fail to document effective-dating rules, payroll errors will be catastrophic.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Workday HCM:** A cloud-native leader known for its single data model and robust effective-dating architecture.
+*   **Oracle HCM Cloud:** Powerful enterprise platform highly utilized for complex global deployments.
+*   **Rippling / Gusto:** Modern platforms often used by SMBs that seamlessly connect Core HR data directly to payroll and IT provisioning.

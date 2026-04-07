@@ -1,0 +1,47 @@
+---
+title: Payment Processing
+domain: fintech
+---
+
+# Payment Processing
+
+**Payment Processing** covers the orchestration of money movement across different networks (e.g., ACH, SEPA, SWIFT, Card Networks). This node focuses on how funds traverse the financial ecosystem from the payer to the payee, handling authorizations, clearing, and the eventual settlement of funds.
+
+## Node Knowledge: The Payment Flow
+1. **Initiation & Authorization:** Validating the payment instruction and securing funds from the funding source.
+2. **Routing:** Determining the optimal network (lowest cost, fastest speed) to execute the transfer.
+3. **Clearing:** The exchange of financial information between institutions to reconcile the upcoming settlement.
+4. **Settlement:** The actual movement of fiat currency between central or correspondent banks and reflecting this in the end-user's account.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+This domain relies heavily on **Process Analysis** and **Solution Evaluation** from the *BABOK®* guide.
+
+*   **Sequence Diagramming:** Charting the back-and-forth communication between the FinTech, the Payment Gateway, the Processor, and the Sponsoring Bank.
+*   **Exception Handling:** Defining what occurs during a payment failure, timeout, or chargeback.
+*   **Reconciliation Analysis:** Ensuring that the platform's internal gateway logs perfectly match the daily settlement files provided by the banks.
+
+## Typical Deliverables
+
+*   **API Sequence Diagrams:** Specifically focusing on asynchronous webhooks (e.g., receiving a `payment_settled` webhook 3 days after initiation).
+*   **Reconciliation BRD:** Business rules outlining how a T+2 settlement file is parsed and matched to individual ledger entries.
+*   **Error Code Mapping:** A matrix translating raw bank error codes (e.g., ACH R01 - Insufficient Funds) into user-friendly notifications.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!WARNING]
+> **From the Desk of a Lead Business Analyst**
+> Beware the "Happy Path" fallacy in payments. Payments fail constantly due to bad routing numbers, blocked accounts, or network downtimes.
+> Your job as a BA isn't just to figure out how to send the money; it's to meticulously document how to gracefully fail, reverse the ledger entries, and inform the user without causing panic.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Stripe / Adyen:** Primary gateways for card acquisition and alternative payment methods.
+*   **Plaid / Trustly:** Facilitate Account-to-Account (A2A) payments via open banking.
+*   **Cross River / ClearBank:** API-first banks that provide direct access to ACH, RTP, and FedNow rails.

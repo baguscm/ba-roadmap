@@ -1,0 +1,45 @@
+---
+title: Credit Scoring
+domain: fintech
+---
+
+# Credit Scoring
+
+A central pillar of "Evaluate and Manage Credit Risk" (APQC 7.2) for lenders.
+
+## Node Knowledge: The Process Lifecycle
+1. **Bureau Pull:** Retrieving historical credit files from Experian, Equifax, or TransUnion via API.
+2. **Feature Engineering:** Calculating derived ratios like "Utilization Rate" and "Account Longevity."
+3. **Model Execution:** Running the data through the proprietary or 3rd-party risk algorithm.
+4. **Adverse Action:** Informing the customer and regulator of the decision and the "Reason Codes" for the score.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Business Rules Analysis:** Documenting the precise "weighting" of different credit factors.
+*   **Data Profiling:** Ensuring the incoming credit data feeds are consistent and not "noisy."
+*   **Acceptance Criteria:** Defining the "Cut-off" scores for "Tier 1," "Tier 2," etc.
+
+## Typical Deliverables
+
+*   **Credit Score Weighting Matrix**
+*   **Bureau Data Mapping Specification**
+*   **Adverse Action Notice (AAN) Template**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Financial Inclusion is a business driver. As a BA, recommend "Alternative Data" (e.g., utility bills, rent payments) for scoring customers who are "Credit Invisible" to the Big Three bureaus.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Fair Isaac (FICO):** The global standard for predictive credit scoring models.
+*   **Experian (Boost):** A modern data enhancement service designed to update consumer credit scores using positive payment history.

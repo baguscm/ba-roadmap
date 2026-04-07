@@ -1,0 +1,45 @@
+---
+title: Purchase Orders
+domain: ecommerce
+---
+
+# Purchase Orders
+
+Falls under "Manage Purchase Orders" in the APQC framework, serving as the legal commitment to purchase.
+
+## Node Knowledge: The Process Lifecycle
+1. **PO Requisition:** Internal request for stock replenishment.
+2. **Approval Workflow:** Escalating based on dollar value thresholds.
+3. **PO Dispatch:** Electronic transmission to the vendor via EDI, Email, or Portal.
+4. **Status Tracking:** Monitoring from "Acknowledged" to "Partially Received" to "Closed".
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Business Rules Analysis:** Defining approval hierarchies and tax application rules.
+*   **Data Modelling:** Ensuring PO line items map correctly to SKU and Ledger codes.
+*   **Process Analysis:** Identifying bottlenecks in the internal approval chain.
+
+## Typical Deliverables
+
+*   **PO Approval Matrix (RACI)**
+*   **Mapping Document (ERP to Vendor Format)**
+*   **Exception Handling Process Flow**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> BAs often forget about "Blanket POs." Ensure your system can handle long-term contracts where one PO is drawn down by multiple shipments over a year.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Microsoft Dynamics 365:** Strong procurement module with native Power Automate for approvals.
+*   **Coupa:** Modern spend management platform focusing on the user experience of PO creation.

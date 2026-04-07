@@ -1,0 +1,45 @@
+---
+title: Gross-to-Net Calculations
+domain: hr-payroll
+---
+
+# Gross-to-Net Calculations
+
+The calculation engine at the heart of "Process Payroll" (APQC 9.3) in financial services.
+
+## Node Knowledge: The Process Lifecycle
+1. **Gross Accumulation:** Summing Base Pay, Overtime, Commissions, and specialized Bonuses.
+2. **Pre-Tax Deductions:** Subtracting 401(k) contributions, Medical Premiums, and FSA/HSA funds.
+3. **Statutory Taxing:** Applying the logic for Federal, State, and local (SUI/SIT/FICA) withholdings.
+4. **Disbursement:** The automated move of the final "Net Pay" into the employee's bank account via ACH.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Mathematical Modeling:** Validating the "Tax on Tax" algorithms used for specialized "Gross-up" payments.
+*   **Acceptance Criteria:** Defining a 0.00% variance threshold for Parallel testing during implementation.
+*   **Financial Analysis:** Ensuring total payroll outflow matches the Treasury's funding availability exactly.
+
+## Typical Deliverables
+
+*   **Earnings & Deductions Mapping Specification**
+*   **Parallel Run Variance Report Template**
+*   **Gross-to-Net Formula Proof Documentation**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The "Parallel Run" is the project. As a BA, you shouldn't go-live until the new system's net pay matches the old legacy system for 99.9% of employees over two pay cycles. Document every penny.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **ADP Workforce Now:** The global standard for enterprise-level payroll processing and compliance.
+*   **Workday Payroll:** Known for its "Always-On" calculation engine that provides real-time visibility into the current pay cycle.

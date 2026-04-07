@@ -1,0 +1,41 @@
+---
+title: CRM & Customer Service
+domain: ecommerce
+---
+
+# CRM & Customer Service
+
+According to **APQC**, this area aligns with "Manage Customer Service" and "Develop and Manage Customer Experience". **CRM (Customer Relationship Management)** is the strategy of tracking every interaction a customer has with a brand. In E-Commerce, customer service is the defining differentiator; acquiring a new customer is wildly expensive, so retaining them through excellent service is paramount.
+
+## Node Knowledge: The CRM Lifecycle
+1. **Profile Building:** Creating a "Golden Record" 360-degree view of a customer (Address, Purchase History, Email Campaign clicks, Fit preferences).
+2. **Support (Helpdesk):** Handling inbound tickets (Where is my order? How do I return this?).
+3. **Outreach & Segmentation:** Identifying VIP customers or "At Risk" customers based on recent negative reviews.
+4. **Loyalty:** Rewarding repeat buyers with points or tiered statuses to encourage higher Lifetime Value (LTV).
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Interface Analysis:** Mapping the data flows from the E-commerce Storefront Database -> the CDP (Customer Data Platform) -> the CRM system.
+*   **Requirements Elicitation:** Determining exactly what data a Call Center Agent needs on their screen when a customer calls in to minimize Average Handle Time (AHT).
+
+## Typical Deliverables
+*   **Customer Journey Map:** Visualizing the emotional highs and lows of the customer experience during an automated chatbot interaction vs a live agent interaction.
+*   **Data Privileges Matrix:** Documenting which agents can see Personally Identifiable Information (PII), such as full credit card numbers or home addresses.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> **Design for the Agent's "Swivel Chair".**
+> The worst CRM implementations result in the "Swivel Chair" problem, where a support agent has Shopify open on one monitor, Zendesk on another, and FedEx tracking on a third. The BA must gather API requirements to pull that tracking data and order status *directly* into the CRM interface so the agent never has to leave the Zendesk window.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Salesforce Service Cloud:** The enterprise standard. BAs will spend considerable time mapping custom data objects into Salesforce's strict schema.
+*   **Zendesk / Gorgias:** Gorgias in particular is tailored for Shopify, pulling all Shopify order metadata straight into the ticket window automatically for agents.

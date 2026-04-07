@@ -1,0 +1,48 @@
+---
+title: Core Ledger & Accounts
+domain: fintech
+---
+
+# Core Ledger & Accounts
+
+The **Core Ledger & Accounts** system is the beating heart of any FinTech platform. It acts as the immutable system of record for all customer balances, transaction histories, and financial state. A robust core ledger ensures that money is never created or destroyed erroneously, adhering to strict double-entry accounting principles.
+
+## Node Knowledge: Core Ledger Dynamics
+1. **Account Structure:** Defining account hierarchies (e.g., checking, savings, sweeping accounts).
+2. **Double-Entry Bookkeeping:** Ensuring every debit has a corresponding credit across the platform's internal and customer accounts.
+3. **Balance Calculations:** Managing available balance vs. current balance (accounting for pending holds or authorizations).
+4. **Interest & Fee Calculations:** Applying daily accruals and monthly capitalizing of interest or account fees.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In the *BABOK®* framework, the **Strategy Analysis** and **Requirements Analysis and Design Definition** knowledge areas are paramount.
+
+*   **Data Modeling:** Designing the entity-relationship diagrams for accounts, transactions, and ledgers.
+*   **Business Rules Analysis:** Capturing the logic for how and when funds are placed on hold, and the sequence of posting transactions (e.g., debits before credits).
+*   **State Machine Design:** Mapping the lifecycle of a transaction from `Pending` to `Settled` or `Reversed`.
+
+## Typical Deliverables
+
+*   **State Transition Diagrams:** Visualizing the statuses an account or transaction can hold.
+*   **Accounting Schema Document:** Detailing the Chart of Accounts (CoA) and mapping product events to specific ledger postings.
+*   **Edge-case Scenarios Matrix:** Documenting what happens handling race conditions (e.g., two simultaneous withdrawals on a low balance).
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The biggest mistake BAs make when designing core banking features is ignoring "Pending" states. Money rarely moves instantly. 
+> Always account for the concept of *Holds*. The fundamental equation you must drill into your development team is:
+> `Available Balance = Current Balance - Holds/Pending Transactions`.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Mambu:** A leading cloud-native core banking engine that operates on a composable architecture.
+*   **Thought Machine (Vault):** Uses smart contracts to define banking products, providing immense flexibility for custom ledgers.
+*   **Marqeta:** Often used as the ledger system for modern card issuing programs.

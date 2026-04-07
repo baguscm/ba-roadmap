@@ -1,0 +1,48 @@
+---
+title: Inventory & Reverse Logistics
+domain: ecommerce
+---
+
+# Inventory & Reverse Logistics
+
+According to the **APQC** standard, this encompasses the core of "Manage Supply Chain for Physical Products", specifically balancing the cost of holding inventory against the risk of stockouts, alongside the operational reality of managing returned items (reverse logistics). In e-commerce, tight inventory controls are the backbone of profitability.
+
+## Node Knowledge: The Logistics Lifecycle
+1. **Inventory Management:** Tracking counts, locations, cycles, and valuations of stock across all facilities.
+2. **Warehouse Operations:** The daily activities of shifting, auditing, and organizing physical pallets.
+3. **Allocation:** Systematically deciding which specific warehouse reserves a specific piece of inventory for an incoming digital order.
+4. **Returns Processing:** Taking in defective or unwanted products, inspecting them, and deciding their final disposition (Restock, Refurbish, Destroy).
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In the *Business Analysis Body of Knowledge (BABOK®)*, this area requires strong **Enterprise Analysis** and **Data Modeling** capabilities.
+
+*   **Process Modeling:** Documenting the physical pathways an item takes from the inbound dock to the storage bin, and eventually the outbound dock.
+*   **Data Dictionary Creation:** Categorizing different *types* of inventory states (e.g., On-Hand vs Available to Promise vs Allocated vs Quarantined).
+*   **Vendor Assessment:** Sourcing and evaluating 3PL (Third Party Logistics) providers or WMS software suites.
+
+## Typical Deliverables
+
+*   **Current State Assessment:** Highlighting spatial inefficiencies or technical debt in the current warehouse operations.
+*   **KPI Definitions:** Working with operators to define metrics like Inventory Turnover Ratio and Carrying Cost formulas.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> **Master the definitions of "Stock".**
+> BAs often fail here by just using the word "Inventory" generically. You must clearly define the differences for developers building the front-end logic:
+> * **On-Hand:** Physical count in the building.
+> * **Allocated:** Promised to a customer order but not yet shipped.
+> * **Available (ATP):** On-Hand minus Allocated. *This* is the number you show on the website.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA / Manhattan:** Massive monolithic core logic platforms that strictly enforce bin-level precision using Mobile RF scanning devices.
+*   **Shopify Locations:** A much simpler abstraction, allowing businesses to easily distribute "Total Quantity" across multiple "Locations" to enable simple Ship-From-Store logic.

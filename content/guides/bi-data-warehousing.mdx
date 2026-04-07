@@ -1,0 +1,45 @@
+---
+title: BI & Data Warehousing
+domain: ecommerce
+---
+
+# BI & Data Warehousing
+
+Falls under "Manage Knowledge and Information" (APQC 12.0) for the e-commerce data stack.
+
+## Node Knowledge: The Process Lifecycle
+1. **Extraction (ETL):** Pulling data from the ERP, WMS, CRM, and Website logs.
+2. **Transformation:** Cleaning and normalizing dates, names, and cross-channel currencies.
+3. **Loading:** Moving data into a centralized Star or Snowflake schema for analysis.
+4. **Querying:** Using SQL or BI tools to build complex multi-dimensional models.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Data Modelling:** Designing Dimensions (Date, SKU, Region) and Measures (Revenue, AOV).
+*   **Business Capability Analysis:** Understanding what strategic decisions the data warehouse must support.
+*   **Risk Analysis:** High-priority management of PII (Personally Identifiable Information).
+
+## Typical Deliverables
+
+*   **Entity Relationship Diagram (ERD)**
+*   **Data Dictionary for the Warehouse**
+*   **ETL Mapping Specification**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The "Single Version of the Truth." As a BA, your most important job is defining the "Source of Truth" for Revenue. Is it the ERP, the Marketplace report, or Google Analytics? If you don't define this, your numbers will never match.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Snowflake:** The leading cloud data platform for modern multi-channel commerce data stacks.
+*   **Google BigQuery:** Heavily integrated with GA4 for powerful commerce and user-journey insights.

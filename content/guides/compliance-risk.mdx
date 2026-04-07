@@ -1,0 +1,47 @@
+---
+title: Compliance & Risk
+domain: fintech
+---
+
+# Compliance & Risk
+
+The **Compliance & Risk** node manages the ongoing surveillance necessary to prevent a financial institution from being used for illicit activities. It operates continuously in the background, analyzing transactions to detect money laundering, terrorism financing, and fraud, while also generating required reports for regulatory bodies.
+
+## Node Knowledge: The Compliance Lifecycle
+1. **Transaction Monitoring:** Scanning daily transfers against intelligent rules to identify suspicious patterns (e.g., structuring).
+2. **Sanctions & Watchlist Screening:** Checking customers and transaction counterparties against government lists (e.g., OFAC).
+3. **Case Management:** Creating alerts for compliance analysts to review and investigate flagged behavior.
+4. **Regulatory Reporting:** Automatically generating and filing Suspicious Activity Reports (SARs) and Currency Transaction Reports (CTRs) to agencies like FinCEN.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+This domain aligns strongly with **Requirements Analysis and Design Definition**, specifically focusing on *Business Rules Analysis* and *Non-Functional Requirements*.
+
+*   **Rule Configuration Mapping:** Translating regulatory requirements into specific, actionable system rules (e.g., "Flag any cash deposit > $9,999").
+*   **Workflow Design:** Creating the investigation workflows for the compliance operations team, including escalation paths.
+*   **Dashboard & Reporting Design:** Specifying the metrics required for the Chief Compliance Officer to monitor platform health.
+
+## Typical Deliverables
+
+*   **Rule Inventory:** A centralized database of all active AML and fraud rules, their thresholds, and their intended purpose.
+*   **Alert Triage Process Flow:** A BPMN diagram showing how an alert moves from creation to either dismissal or SAR filing.
+*   **Data Lineage Diagrams:** Tracing how transaction data flows from the core ledger into the monitoring system.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The biggest challenge in AML transaction monitoring is dealing with "False Positives." If you set rules too tightly, you will drown the operations team in alerts. 
+> As a BA, you must help the business strike a balance between risk tolerance and operational capacity. Suggest implementing "scoring" thresholds rather than binary triggers.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Unit21 / Sardine:** Modern, API-driven risk and compliance infrastructure for transaction monitoring and case management.
+*   **Verafin:** A comprehensive, cloud-based platform heavily used by credit unions and mid-sized banks for anti-financial crime.
+*   **Chainalysis:** Specifically utilized for monitoring and tracking blockchain and cryptocurrency transactions.

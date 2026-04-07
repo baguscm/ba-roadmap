@@ -1,0 +1,37 @@
+{
+  "id": "hr-payroll",
+  "name": "HR & Payroll Framework",
+  "nodes": [
+    { "id": "talent-acquisition", "data": { "label": "Talent Acquisition" }, "position": { "x": 200, "y": 35 } },
+    { "id": "recruitment", "data": { "label": "Recruitment", "type": "sub" }, "position": { "x": 600, "y": 0 } },
+    { "id": "candidate-onboarding", "data": { "label": "Candidate Onboarding", "type": "sub" }, "position": { "x": 600, "y": 70 } },
+    { "id": "core-hr", "data": { "label": "Core HR" }, "position": { "x": 200, "y": 235 } },
+    { "id": "employee-data", "data": { "label": "Employee Data Management", "type": "sub" }, "position": { "x": 600, "y": 200 } },
+    { "id": "benefits-admin", "data": { "label": "Benefits Administration", "type": "sub" }, "position": { "x": 600, "y": 270 } },
+    { "id": "time-attendance", "data": { "label": "Time & Attendance" }, "position": { "x": 200, "y": 435 } },
+    { "id": "time-tracking", "data": { "label": "Time Tracking", "type": "sub" }, "position": { "x": 600, "y": 400 } },
+    { "id": "leave-management", "data": { "label": "Absence & Leave Management", "type": "sub" }, "position": { "x": 600, "y": 470 } },
+    { "id": "payroll-operations", "data": { "label": "Payroll Operations" }, "position": { "x": 200, "y": 635 } },
+    { "id": "gross-to-net", "data": { "label": "Gross-to-Net Calculations", "type": "sub" }, "position": { "x": 600, "y": 600 } },
+    { "id": "taxes-deductions", "data": { "label": "Statutory Taxes & Deductions", "type": "sub" }, "position": { "x": 600, "y": 670 } },
+    { "id": "talent-management", "data": { "label": "Talent Management" }, "position": { "x": 200, "y": 835 } },
+    { "id": "performance-management", "data": { "label": "Performance Management", "type": "sub" }, "position": { "x": 600, "y": 800 } },
+    { "id": "offboarding", "data": { "label": "Offboarding & Exit Processes", "type": "sub" }, "position": { "x": 600, "y": 870 } }
+  ],
+  "edges": [
+    { "id": "e-talent-acquisition-core-hr", "source": "talent-acquisition", "target": "core-hr", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-talent-acquisition-recruitment", "source": "talent-acquisition", "target": "recruitment", "sourceHandle": "right" },
+    { "id": "e-talent-acquisition-candidate-onboarding", "source": "talent-acquisition", "target": "candidate-onboarding", "sourceHandle": "right" },
+    { "id": "e-core-hr-time-attendance", "source": "core-hr", "target": "time-attendance", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-core-hr-employee-data", "source": "core-hr", "target": "employee-data", "sourceHandle": "right" },
+    { "id": "e-core-hr-benefits-admin", "source": "core-hr", "target": "benefits-admin", "sourceHandle": "right" },
+    { "id": "e-time-attendance-payroll-operations", "source": "time-attendance", "target": "payroll-operations", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-time-attendance-time-tracking", "source": "time-attendance", "target": "time-tracking", "sourceHandle": "right" },
+    { "id": "e-time-attendance-leave-management", "source": "time-attendance", "target": "leave-management", "sourceHandle": "right" },
+    { "id": "e-payroll-operations-talent-management", "source": "payroll-operations", "target": "talent-management", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-payroll-operations-gross-to-net", "source": "payroll-operations", "target": "gross-to-net", "sourceHandle": "right" },
+    { "id": "e-payroll-operations-taxes-deductions", "source": "payroll-operations", "target": "taxes-deductions", "sourceHandle": "right" },
+    { "id": "e-talent-management-performance-management", "source": "talent-management", "target": "performance-management", "sourceHandle": "right" },
+    { "id": "e-talent-management-offboarding", "source": "talent-management", "target": "offboarding", "sourceHandle": "right" }
+  ]
+}

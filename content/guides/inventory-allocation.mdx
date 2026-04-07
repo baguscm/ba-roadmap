@@ -1,0 +1,45 @@
+---
+title: Inventory Allocation
+domain: ecommerce
+---
+
+# Inventory Allocation
+
+Part of "Plan and Manage Inventory" in the APQC framework, specifically focusing on the logic of stock reservation.
+
+## Node Knowledge: The Process Lifecycle
+1. **Global Inventory Visibility:** Maintaining a real-time view of stock across all warehouses and stores.
+2. **Safety Stock Buffer:** Reserving items to prevent over-selling (e.g., hiding the last 2 units from the website).
+3. **Channel Allocation:** Reserving specific stock pools for Amazon vs. Shopify vs. Physical Retail.
+4. **Pre-order Management:** Allocating inventory that is "In-Transit" but not yet physically received.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Business Rules Analysis:** Defining the "Who gets it first?" priority (e.g., VIP customers vs standard).
+*   **Data Dictionary:** Defining clear states for quantities: "On-Hand," "Available," and "Pledged."
+*   **Decision Modelling:** Mapping the logic of "Safety Stock" calculations based on lead times.
+
+## Typical Deliverables
+
+*   **Inventory Scarcity Rule Set**
+*   **Multi-Channel Allocation Matrix**
+*   **Safety Stock Algorithm Specification**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Avoid "Overselling" at all costs. Over-selling 10 units on eBay might get your store banned. As a BA, always implement a "Safety Buffer"—even if you have 10 items, only tell the marketplace you have 8.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Manhattan Omni-Channel:** Specialized in global inventory visibility and complex cross-channel allocation.
+*   **Brightpearl:** A retail OS that handles multi-channel inventory and allocation for mid-size brands.

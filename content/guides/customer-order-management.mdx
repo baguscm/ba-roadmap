@@ -1,0 +1,45 @@
+---
+title: Customer Order Management
+domain: ecommerce
+---
+
+# Customer Order Management
+
+The core of "Execute Customer Orders" (APQC 5.0). It covers the transition from browsing to commitment.
+
+## Node Knowledge: The Process Lifecycle
+1. **Order Capture:** Synchronizing the website basket with the back-end OMS.
+2. **Credit/Fraud Check:** Triggering risk scores (e.g., via Signifyd or Kount).
+3. **Inventory Commitment:** Hard-allocating stock so it can't be sold twice.
+4. **Order Orchestration:** Routing the order to the nearest or cheapest warehouse.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Use Cases:** Defining the "Cancel Order," "Split Order," and "Edit Address" scenarios.
+*   **State Modelling:** Defining the complex lifecycle (New -> Pending -> Shipped -> Returns).
+*   **Stakeholder Collaboration:** Balancing Marketing's needs (discounts) with Ops (shipping limits).
+
+## Typical Deliverables
+
+*   **Order Status State Transition Diagram**
+*   **Fraud Rule Matrix**
+*   **Order Split Logic Requirements**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The "Pending Payment" state is where orders go to die. Ensure you have automated triggers to notify a customer if their credit card is declined, allowing them to fix it without losing their cart.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Salesforce Order Management:** Tightly integrated with Commerce Cloud for a unified CX.
+*   **Fluent Commerce:** A distributed OMS that specializes in complex, multi-site order routing.

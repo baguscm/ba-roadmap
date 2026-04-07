@@ -1,0 +1,48 @@
+---
+title: Procure to Pay (P2P)
+domain: ecommerce
+---
+
+# Procure to Pay (P2P)
+
+According to **APQC** standards, the Procure to Pay (P2P) process falls under the "Procure Materials and Services" framework. It encompasses the end-to-end cycle of identifying a need for goods, sourcing them from suppliers, receiving them into inventory, and issuing payment. In e-commerce, executing P2P efficiently prevents stockouts and manages working capital.
+
+## Node Knowledge: The P2P Lifecycle
+1. **Sourcing & Requisition:** Determining what inventory is needed based on demand forecasting.
+2. **Purchasing (PO Creation):** Formalizing the order with the supplier.
+3. **Receiving:** Taking physical delivery of goods and capturing data.
+4. **Invoicing & Payment:** Matching supplier invoices with internal POs and receipts to authorize payment.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In the *Business Analysis Body of Knowledge (BABOK®)*, mapping the P2P lifecycle heavily relies on the **Process Analysis** and **Elicitation and Collaboration** knowledge areas.
+
+*   **Process Modeling:** Documenting the "As-Is" flow of how a buyer requests inventory vs the "To-Be" automated process.
+*   **Gap Analysis:** Identifying where manual interventions (like paper invoices) are slowing down the procure-to-pay cycle.
+*   **Stakeholder Identification:** Mapping the complex web of stakeholders (Buyers, Warehouse Managers, Accounts Payable clerks).
+
+## Typical Deliverables
+
+*   **Process Flow Diagrams (BPMN):** Defining swimlanes for Procurement, Warehouse, and Finance.
+*   **Business Rules Document:** Capturing threshold rules (e.g., "Purchases over $50k require VP approval").
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Your biggest challenge in P2P implementation isn't the requirements—it's the data silos. 
+> * Procurement lives in negotiating contracts. 
+> * Warehouse lives in physical boxes. 
+> * Finance lives in the ledger. 
+> As a BA, you must force these three groups into the same room. A broken P2P process usually means one department designed the workflow without consulting the others.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA & Ariba:** Typically, sourcing occurs in Ariba (Upstream), while the actual physical receiving and invoice matching occurs in S/4HANA (Downstream).
+*   **Oracle NetSuite:** NetSuite handles P2P natively via the "Procure to Pay" suite, allowing a single continuous workflow from the `Purchase Order` record to the `Item Receipt` sub-record, mapping to the `Vendor Bill`.

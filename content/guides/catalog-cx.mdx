@@ -1,0 +1,45 @@
+---
+title: Catalog & Customer Experience
+domain: ecommerce
+---
+
+# Catalog & Customer Experience
+
+In the **APQC** standard, this translates seamlessly to "Market and Sell Products and Services" and "Manage Customer Experience." This node represents the digital storefront and customer journey. Before a transaction can happen, products must be presentable, searchable, and attractively priced.
+
+## Node Knowledge: The Catalog Lifecycle
+1. **Product Master Creation:** The ERP defines the SKU (Stock Keeping Unit) with basic logistical data (weight, dimensions).
+2. **Data Enrichment (PIM):** Adding marketing descriptions, high-resolution imagery, and tagging SEO keywords.
+3. **Merchandising:** Grouping products logically (e.g., "Summer Collection") and configuring cross-sells (e.g., "Customers also bought...").
+4. **Pricing & Campaigns:** Applying base price books, discount rules, and running digital marketing campaigns to drive conversion.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Data Modeling:** Documenting the taxonomy of categories. How deep does the tree go? (e.g., Men -> Shoes -> Sneakers -> Running).
+*   **Requirements Definition:** Specifying exactly how search works. If a user types "sneeker" instead of "sneaker", does the system use fuzzy logic to return correct results?
+*   **User Story Mapping:** Defining the customer journey from the landing page to the checkout cart, detailing every digital touchpoint.
+
+## Typical Deliverables
+
+*   **Entity Relationship Diagram (ERD):** Showing how a "Parent Product" (e.g., Shirt) relates to its "Variants" (e.g., Size Medium, Color Blue).
+*   **SEO Data Matrix:** A matrix documenting the dynamically required meta-fields for page rendering.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> **Master the Variant Structure.**
+> In E-commerce, the difference between a Parent/Child (or Matrix) item is the fastest way to confuse stakeholders. 
+> * Does the ERP treat "Red Shirt Large" as its own distinct item, or is it a sub-variant of "Shirt"? 
+> Ensure the PIM system's logic exactly mirrors the ERP's logic, or data syncs will constantly fail.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **PIM Systems (Akeneo / Salsify):** Specialized software that sits between the ERP and the Storefront, allowing marketers to batch-enrich product descriptions and push them across endless channels (Shopify, Amazon, eBay).
+*   **Storefronts (Shopify Plus / Magento / Salesforce Commerce Cloud):** The actual rendering engines that handle the customer session, search queries (often leveraging tools like Algolia), and cart interactions.

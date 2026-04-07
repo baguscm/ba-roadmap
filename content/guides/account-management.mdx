@@ -1,0 +1,45 @@
+---
+title: Account Management
+domain: fintech
+---
+
+# Account Management
+
+Relates to "Perform Financial Transactions" and "Manage Customer Service" in the banking APQC hierarchy.
+
+## Node Knowledge: The Process Lifecycle
+1. **Account Provisioning:** Defining the default ledger state and sub-account structure upon approval.
+2. **Maintenance:** Handling changes to transaction limits, profile details, or linked bank accounts.
+3. **State Transitions:** Managing accounts being placed on "Legal Hold" or "Administrative Lock."
+4. **Closure:** Handling final interest accruals, fee sweeps, and fund disbursement during closure.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **State Modelling:** Defining the exhaustive list of account statuses and all possible transitions.
+*   **Organization Modelling:** Establishing security profiling for "Admin Only" account modifications.
+*   **Process Modeling:** Mapping the complex flow for re-opening or transferring previously closed accounts.
+
+## Typical Deliverables
+
+*   **Account State Transition Diagram**
+*   **Internal Support Admin UI Wireframes**
+*   **Immutable Audit Logging Requirements**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Immutable logging is key. As a BA, ensure that EVERY change to an account balance or limit is logged with a "Who/What/When" that cannot be edited or deleted by anyone.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Mambu:** A cloud-native core banking platform designed for flexible, composable financial services.
+*   **Thought Machine:** Built on the "Vault" engine, allowing for smart contracts to define custom account behaviors.

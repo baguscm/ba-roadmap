@@ -1,0 +1,45 @@
+---
+title: Transaction Processing
+domain: fintech
+---
+
+# Transaction Processing
+
+The heartbeat of bank-representative software, centered on "Execute Financial Transactions."
+
+## Node Knowledge: The Process Lifecycle
+1. **Validation:** Verifyingsufficient funds, account status, and transaction security codes.
+2. **Hold Placement:** Reserving funds in real-time (e.g. for a pending card authorization).
+3. **Ledger Posting:** Executing the atomic, dual-entry update of debits and credits.
+4. **History Generation:** Converting raw ledger events into sorted, human-readable transaction history.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Non-Functional Requirements:** Defining high-performance throughput targets (Transactions Per Second).
+*   **Process Analysis:** Identifying potential race conditions in high-volume shared-ledger environments.
+*   **Data Modelling:** Designing the "Transaction Log" schema for maximum retrieval speed and integrity.
+
+## Typical Deliverables
+
+*   **Ledger Posting Logical Diagram**
+*   **Throughput & Latency Specification**
+*   **Idempotency Key Specification**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Idempotency is non-negotiable. As a BA, ensure your API requirements include a "Unique Request ID" to prevent a customer from accidentally being charged twice if they click the button twice.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Jack Henry:** A massive American provider of core-banking and transaction processing for community banks.
+*   **FIS (Modern Banking Platform):** A hyper-scalable transaction core for global Tier 1 financial institutions.

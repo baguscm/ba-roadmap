@@ -1,0 +1,47 @@
+---
+title: Time & Attendance
+domain: hr-payroll
+---
+
+# Time & Attendance
+
+The **Time & Attendance** process captures, validates, and manages employee working hours and absences. This node is a critical precursor to payroll, ensuring that hourly personnel are compensated accurately and that salaried employees' leave balances are tracked in accordance with enterprise policies and labor laws.
+
+## Node Knowledge: Time Tracking Dynamics
+1. **Time Capture:** Recording punches via physical clocks, web portals, or mobile apps.
+2. **Scheduling & Shifts:** Defining typical working hours, shift differentials, and predictive scheduling.
+3. **Absence Management:** Requesting, approving, and accruing PTO, sick leave, and statutory leaves (e.g., FMLA).
+4. **Time Evaluation:** Applying business rules to raw punches to determine regular hours, overtime, and penalty pay.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+This area heavily utilizes **Requirements Elicitation** and **Business Rules Analysis** from the *BABOK®* guide.
+
+*   **Overtime Rule Definition:** Translating complex union agreements or state laws (e.g., California daily overtime) into system calculation rules.
+*   **Process Mapping:** Charting the approval workflow for timesheets and PTO requests, including delegations when managers are absent.
+*   **Integration Analysis:** Ensuring that the approved, evaluated time block data flows seamlessly to the payroll gross-to-net engine.
+
+## Typical Deliverables
+
+*   **Calculated Time Rules Document:** Complex matrices detailing how time punches are mapped to specific pay codes (Regular, OT 1.5, Double Time, Shift Premium).
+*   **Leave Accrual Matrix:** Defining how much PTO is earned per pay period based on an employee's tenure and job level.
+*   **Exceptions Workflow:** Diagrams mapping how missing punches or late arrivals are flagged and resolved by supervisors.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!CAUTION]
+> **From the Desk of a Lead Business Analyst**
+> Time evaluation is where lawsuits are born. State specific meal-break compliance is exceedingly difficult to configure correctly. 
+> Ensure your requirements capture not just the "rule," but how the system handles the breach of a rule. If a California employee takes a 25-minute lunch instead of 30, how is the penalty configured, and who is notified?
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **UKG (Kronos):** An industry heavyweight specifically known for handling incredibly complex union and manufacturing time tracking.
+*   **Workday Time Tracking:** The native module seamlessly integrated with Workday Payroll and Absence Management.
+*   **Ceridian Dayforce:** A modern HCM where time evaluation is calculated continuously, allowing real-time preview of payroll gross pay.

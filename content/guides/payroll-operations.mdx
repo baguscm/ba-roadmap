@@ -1,0 +1,47 @@
+---
+title: Payroll Operations
+domain: hr-payroll
+---
+
+# Payroll Operations
+
+**Payroll Operations** is the high-stakes terminus of the HR lifecycle. It involves translating fixed compensation data, variable time data, and complex tax regulations into accurate, timely net pay for employees. A failure in this node results in immediate employee dissatisfaction and potential compliance penalties.
+
+## Node Knowledge: The Gross-to-Net Engine
+1. **Pre-Payroll Processing:** Aggregating data from Core HR (salaries, addresses) and Time & Attendance (approved hours).
+2. **Gross Pay Calculation:** Determining total earnings before any deductions (Base + Overtime + Bonuses).
+3. **Taxes & Deductions:** Applying federal, state, and local tax algorithms, alongside voluntary deductions (401k, health premiums) and involuntary garnishments.
+4. **Post-Payroll & Dispersal:** Generating ACH files for direct deposit, printing checks, and producing internal banking logic (GL files).
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In *BABOK®*, payroll implementations demand rigorous **Requirements Analysis and Design Definition**, specifically focusing on *Data Flow* and *Financial Controls*.
+
+*   **Earnings/Deductions Configuration:** Mapping every possible pay component to its specific tax behavior (e.g., "Is a uniform allowance subject to Federal Income Tax?").
+*   **Parallel Testing Coordination:** A BA often leads the complex process of running the legacy payroll and the new payroll software simultaneously and explaining any discrepancies.
+*   **General Ledger (GL) Integration:** Defining how payroll liabilities and expenses map to the company's financial accounting system.
+
+## Typical Deliverables
+
+*   **Earning & Deduction Matrix:** A comprehensive catalog of all pay codes, taxability flags, and GL mapping.
+*   **Payroll Processing Schedule:** A timeline document outlining the cut-off dates for HR data entry, time approvals, and final commit.
+*   **Parallel Run Variance Reports:** Analysis documents detailing exactly why Penny Smith's net pay differed by $1.15 between the old and new systems.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!IMPORTANT]
+> **From the Desk of a Lead Business Analyst**
+> Your most stressful deliverable will be the "Parallel Run." 
+> You must define the acceptable variance threshold upfront. Is a difference of 2 cents due to rounding acceptable? Yes. Is a difference of $50 acceptable? No. Ensure business stakeholders sign off on the definition of "Success" before you run the first test, otherwise the project will never go live.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **ADP (Vantage / Next Gen):** The global behemoth of managed and in-house payroll processing.
+*   **Workday Payroll:** Known for "continuous calculation," meaning gross-to-net processing occurs in real-time as time and HR events are entered.
+*   **Paylocity / Paycom:** Cloud-based solutions providing robust payroll engines coupled with comprehensive HCM tools.

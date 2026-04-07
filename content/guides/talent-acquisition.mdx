@@ -1,0 +1,46 @@
+---
+title: Talent Acquisition
+domain: hr-payroll
+---
+
+# Talent Acquisition
+
+In the HR & Payroll domain, the **Talent Acquisition** process—often governed by the "Develop and Manage Human Capital" APQC framework—represents the pipeline from identifying a hiring need to bringing a new employee on board. An optimized Talent Acquisition process reduces time-to-fill metrics and ensures compliance with equal opportunity employment laws.
+
+## Node Knowledge: The Recruitment Lifecycle
+1. **Requisition & Approvals:** A hiring manager formally requests a new headcount and secures budget approval.
+2. **Sourcing & Screening:** Advertising the role, parsing resumes, and conducting initial interviews (often via Applicant Tracking Systems).
+3. **Selection & Offer:** Conducting final interviews, performing background checks, and generating the employment contract.
+4. **Pre-Onboarding:** Managing the handoff to the core HR system and IT provisioning before Day 1.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+According to *BABOK®*, structuring recruitment workflows requires adept **Process Modeling** and **Stakeholder Collaboration**.
+
+*   **Workflow Mapping:** Designing the stage-gate process a candidate moves through (e.g., Applied -> Phone Screen -> Technical Interview -> Offer).
+*   **System Integration Analysis:** Defining how candidate data flows from the ATS (Applicant Tracking System) into the Core HRIS upon hiring, minimizing manual data entry.
+*   **User Story Creation:** Writing requirements for hiring managers, recruiters, and candidates to ensure a seamless portal experience.
+
+## Typical Deliverables
+
+*   **Recruitment Funnel Diagrams:** Visual representation of candidate statuses.
+*   **Integration Mapping Spec:** Documenting fields (Name, Address, Offer Salary) sent via API from the ATS to the HRIS.
+*   **Roles & Permissions Matrix:** Ensuring hiring managers can only see compensation data for candidates in their specific requisition.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Data duplication is the nemesis of HR implementations. If a recruiter types a candidate's name in the ATS, and an HR admin has to retype it into the payroll system, your implementation team has failed. Focus intensely on the data payload that triggers upon the "Mark as Hired" event.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Greenhouse / Lever:** Modern, API-first Applicant Tracking Systems focused on collaborative hiring.
+*   **Workday Recruiting:** The native recruitment module within the Workday HCM suite.
+*   **SAP SuccessFactors (Recruiting):** Comprehensive enterprise solution often integrated with core SAP HR modules.

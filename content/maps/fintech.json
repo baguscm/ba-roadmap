@@ -1,0 +1,37 @@
+{
+  "id": "fintech",
+  "name": "FinTech Base Framework",
+  "nodes": [
+    { "id": "customer-onboarding", "data": { "label": "Customer Onboarding" }, "position": { "x": 200, "y": 35 } },
+    { "id": "kyc-kyb", "data": { "label": "KYC/KYB & Identity Verification", "type": "sub" }, "position": { "x": 600, "y": 0 } },
+    { "id": "risk-assessment", "data": { "label": "Risk Assessment & Profiling", "type": "sub" }, "position": { "x": 600, "y": 70 } },
+    { "id": "core-ledger", "data": { "label": "Core Ledger & Accounts" }, "position": { "x": 200, "y": 235 } },
+    { "id": "account-management", "data": { "label": "Account Management", "type": "sub" }, "position": { "x": 600, "y": 200 } },
+    { "id": "transaction-processing", "data": { "label": "Transaction Processing", "type": "sub" }, "position": { "x": 600, "y": 270 } },
+    { "id": "payment-processing", "data": { "label": "Payment Processing" }, "position": { "x": 200, "y": 435 } },
+    { "id": "payment-gateways", "data": { "label": "Payment Gateways", "type": "sub" }, "position": { "x": 600, "y": 400 } },
+    { "id": "clearing-settlement", "data": { "label": "Clearing & Settlement", "type": "sub" }, "position": { "x": 600, "y": 470 } },
+    { "id": "credit-lending", "data": { "label": "Credit & Lending" }, "position": { "x": 200, "y": 635 } },
+    { "id": "loan-origination", "data": { "label": "Loan Origination", "type": "sub" }, "position": { "x": 600, "y": 600 } },
+    { "id": "credit-scoring", "data": { "label": "Credit Scoring", "type": "sub" }, "position": { "x": 600, "y": 670 } },
+    { "id": "compliance-risk", "data": { "label": "Compliance & Risk" }, "position": { "x": 200, "y": 835 } },
+    { "id": "aml-monitoring", "data": { "label": "AML Monitoring", "type": "sub" }, "position": { "x": 600, "y": 800 } },
+    { "id": "regulatory-reporting", "data": { "label": "Regulatory Reporting", "type": "sub" }, "position": { "x": 600, "y": 870 } }
+  ],
+  "edges": [
+    { "id": "e-customer-onboarding-core-ledger", "source": "customer-onboarding", "target": "core-ledger", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-customer-onboarding-kyc-kyb", "source": "customer-onboarding", "target": "kyc-kyb", "sourceHandle": "right" },
+    { "id": "e-customer-onboarding-risk-assessment", "source": "customer-onboarding", "target": "risk-assessment", "sourceHandle": "right" },
+    { "id": "e-core-ledger-payment-processing", "source": "core-ledger", "target": "payment-processing", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-core-ledger-account-management", "source": "core-ledger", "target": "account-management", "sourceHandle": "right" },
+    { "id": "e-core-ledger-transaction-processing", "source": "core-ledger", "target": "transaction-processing", "sourceHandle": "right" },
+    { "id": "e-payment-processing-credit-lending", "source": "payment-processing", "target": "credit-lending", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-payment-processing-payment-gateways", "source": "payment-processing", "target": "payment-gateways", "sourceHandle": "right" },
+    { "id": "e-payment-processing-clearing-settlement", "source": "payment-processing", "target": "clearing-settlement", "sourceHandle": "right" },
+    { "id": "e-credit-lending-compliance-risk", "source": "credit-lending", "target": "compliance-risk", "sourceHandle": "bottom", "animated": true },
+    { "id": "e-credit-lending-loan-origination", "source": "credit-lending", "target": "loan-origination", "sourceHandle": "right" },
+    { "id": "e-credit-lending-credit-scoring", "source": "credit-lending", "target": "credit-scoring", "sourceHandle": "right" },
+    { "id": "e-compliance-risk-aml-monitoring", "source": "compliance-risk", "target": "aml-monitoring", "sourceHandle": "right" },
+    { "id": "e-compliance-risk-regulatory-reporting", "source": "compliance-risk", "target": "regulatory-reporting", "sourceHandle": "right" }
+  ]
+}

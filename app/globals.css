@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #faf9f6;
+  --foreground: #334155;
+  --primary: #5f7a61;
+  --primary-foreground: #ffffff;
+  --node-bg: #ffffff;
+  --node-border: #e5e7eb;
+  --node-completed: #86a389;
+  --subnode-bg: #f3f4f1;
+  --subnode-border: #d1d5db;
+  --subnode-text: #4b5563;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-node-bg: var(--node-bg);
+  --color-node-border: var(--node-border);
+  --color-node-completed: var(--node-completed);
+  --color-subnode-bg: var(--subnode-bg);
+  --color-subnode-border: var(--subnode-border);
+  --color-subnode-text: var(--subnode-text);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1c1e;
+    --foreground: #e2e8f0;
+    --primary: #86a389;
+    --primary-foreground: #1a1c1e;
+    --node-bg: #2d2f31;
+    --node-border: #3f4144;
+    --node-completed: #a3b8a6;
+    --subnode-bg: #242628;
+    --subnode-border: #3f4144;
+    --subnode-text: #cbd5e1;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

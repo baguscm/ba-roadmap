@@ -1,0 +1,45 @@
+---
+title: Clearing & Settlement
+domain: fintech
+---
+
+# Clearing & Settlement
+
+Covers the "Manage Cash and Treasury Systems" and "Interbank Reconciliation" category.
+
+## Node Knowledge: The Process Lifecycle
+1. **Clearing:** Financial institutions exchanging payment instructions to calculate net positions.
+2. **Netting:** Determining the final lump sum to be moved between banks at the day's cut-off.
+3. **Settlement:** The actual movement of central bank funds (Fiat) to fulfill interbank obligations.
+4. **Reconciliation:** Matching the final bank statement against internal platform clearing logs.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Process Modeling:** Mapping the T+1 or T+2 settlement timelines for different payment rails.
+*   **Data Analysis:** Monitoring real-time liquidity to ensure all outgoing settlement obligations are funded.
+*   **Root Cause Analysis:** Investigating "Batch Failures" or "Returns" in high-volume ACH/SEPA files.
+
+## Typical Deliverables
+
+*   **Settlement Reconciliation SOP**
+*   **Interbank File (ISO 20022) Mapping**
+*   **Liquidity Dashboard Specification**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Settlement is a timing game. As a BA, your most critical job is defining the "Cut-off Times." If a payment is sent after 5 PM, does it arrive tomorrow or in two days? This defines your entire CX.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Volante:** A specialized platform for high-speed payment clearing and global ISO 20022 messaging.
+*   **FedNow:** The United States' new instant settlement infrastructure for 24/7/365 payments.

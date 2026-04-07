@@ -1,0 +1,45 @@
+---
+title: Order to Cash (O2C)
+domain: ecommerce
+---
+
+# Order to Cash (O2C)
+
+According to **APQC** standards, the **Order to Cash (O2C)** process encompasses the entire lifecycle of receiving an order from a customer and successfully capturing payment for that order. In E-Commerce, the speed and accuracy of the O2C cycle is the primary driver of customer satisfaction and corporate revenue flow.
+
+## Node Knowledge: The O2C Lifecycle
+1. **Order Capture:** A customer places an order on the digital storefront.
+2. **Order Management:** The system validates inventory, fraud risk, and routes the order to the correct fulfillment center.
+3. **Fulfillment:** Picking, packing, and shipping the physical units.
+4. **Payment Capture:** Authorizing and eventually settling the credit card or digital wallet transaction.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In the *Business Analysis Body of Knowledge (BABOK®)*, analyzing O2C relies heavily on the **Solution Evaluation** and **Requirements Analysis** knowledge areas, particularly focusing on mitigating bottlenecks.
+
+*   **Data Modeling:** Documenting the transition of states for the central "Order" entity as it touches the Website, the Order Management System (OMS), and the Warehouse Management System (WMS).
+*   **Root Cause Analysis:** Investigating why orders get "stuck" in the system (e.g., inventory allocation failures).
+*   **Non-Functional Requirements Validation:** Ensuring the OMS can handle peak order volumes during flash sales (e.g., Black Friday).
+
+## Typical Deliverables
+
+*   **Context Diagram:** A high-level visual showing the flow of data between the E-Commerce front-end (e.g., Shopify), the OMS, the Payment Gateway (e.g., Stripe), and the ERP.
+*   **Functional Specification Document (FSD):** Detailing the exact API payloads generated when a customer clicks "Checkout".
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The most critical point of failure in modern e-commerce O2C is "Inventory Allocation". 
+> Do not just document *how* an order is created. Document *when* the inventory is secured. If a customer adds an item to their cart, is it held? Or is it only deducted upon successful credit card capture? Getting this wrong leads to overselling, which destroys brand trust.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Salesforce Commerce Cloud (SFCC):** Often handles the front-end capture, creating standard payload objects that are injected into a downstream ERP.
+*   **Manhattan Active Omni:** An industry-leading Order Management System (OMS) built specifically to orchestrate complex O2C routing (e.g., Ship from Store vs Ship from Warehouse).

@@ -1,0 +1,46 @@
+---
+title: Customer Onboarding
+domain: fintech
+---
+
+# Customer Onboarding
+
+In the FinTech domain, **Customer Onboarding** is the critical first interaction between the financial institution and a new client. It involves collecting demographic data, verifying identity (KYC/KYB), and performing initial risk profiling to ensure regulatory compliance before granting access to financial products.
+
+## Node Knowledge: The Onboarding Lifecycle
+1. **Application & Data Collection:** Gathering personal or business details securely via digital channels.
+2. **Identity Verification (KYC/KYB):** Validating government IDs, biometrics, and corporate registries.
+3. **Risk Scoring:** Assigning a risk profile based on geography, income source, and intended product usage.
+4. **Account Provisioning:** Approving the customer and creating the initial ledger records.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+According to the *Business Analysis Body of Knowledge (BABOK®)*, mastering onboarding heavily relies on **Requirements Elicitation** and **Requirements Life Cycle Management**.
+
+*   **Process Modeling:** Mapping the happy path of instant approval vs. the exception paths (e.g., manual compliance review required).
+*   **Non-Functional Requirements (NFRs):** Defining strict NFRs for security, data privacy (GDPR/CCPA/PIPL), and system latency during automated identity checks.
+*   **Third-Party API Integration Analysis:** Determining the data contracts between the core system and third-party KYC providers.
+
+## Typical Deliverables
+
+*   **Data Mapping Document:** Tracking PII (Personally Identifiable Information) from the UI down to the encrypted database.
+*   **API Interface Specifications:** Defining the payload structure for identity verification calls.
+*   **Risk Matrix Rules:** Documenting the business rules that trigger different risk tiers.
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't underestimate the friction caused by compliance. Your goal is to maximize conversion rates while satisfying legal requirements. Always ask: "Can this data point be gathered passively in the background, or do we really need to put it on a form and interrupt the user?" 
+> *A 5% drop-off at the ID scan step equals millions in lost revenue.*
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Onfido / Jumio:** Common third-party services integrated via API for document verification and liveness checks.
+*   **Alloy / Socure:** Decision engines used to aggregate various data points and return a unified risk and identity score.

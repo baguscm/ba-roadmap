@@ -1,0 +1,45 @@
+---
+title: Payment Gateways
+domain: fintech
+---
+
+# Payment Gateways
+
+Focuses on the "Process Customer Payments" segment of the O2C cycle in a FinTech context.
+
+## Node Knowledge: The Process Lifecycle
+1. **Authentication:** 3D Secure and PSD2-compliant multi-factor authentication checks.
+2. **Authorization:** Requesting the "Auth" from the issuing bank via the card networks.
+3. **Capture:** The final execution signal to move the physical money after authorization.
+4. **Notification:** Managing real-time webhooks (success/failure) for merchants.
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Sequence Diagrams:** Mapping the sub-second communication between Website, Gateway, and Processor.
+*   **Risk Analysis:** Tracking and mitigating "Chargeback Ratios" and fraud level triggers.
+*   **Interface Analysis:** Mapping raw technical gateway responses into clear, localized user messages.
+
+## Typical Deliverables
+
+*   **Payment Webhook Data Map**
+*   **Checkout / Modal UI Requirements**
+*   **Payment Retry & Fallback Strategy**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't ignore the "Retry" logic. As a BA, define how many times a system should attempt a "Soft Decline" (network timeout) before failing the transaction.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Stripe:** The developer-first gold standard for internet scale payment infrastructure.
+*   **Cybersource (a Visa Solution):** A global gateway providing massive reach and sophisticated fraud tools.
