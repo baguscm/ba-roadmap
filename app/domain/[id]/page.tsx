@@ -17,7 +17,7 @@ async function getGuideContent(id: string) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const contentWithoutFrontmatter = fileContent.replace(/---\n[\s\S]*?\n---/, '');
     return contentWithoutFrontmatter;
-  } catch (e) {
+  } catch {
     return null;
   }
 }
@@ -26,7 +26,7 @@ async function getDomainMap(domainId: string) {
   try {
     const filePath = path.join(process.cwd(), 'content', 'maps', `${domainId}.json`);
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  } catch (e) {
+  } catch {
     return { nodes: [], edges: [] };
   }
 }

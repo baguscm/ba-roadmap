@@ -1,23 +1,25 @@
+import * as React from 'react';
 import { useState, useEffect } from 'react';
 
 export function useProgress(domainId: string) {
   const [completedNodes, setCompletedNodes] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const loadStorage = () => {
+  const loadStorage = React.useCallback(() => {
     if (typeof window === 'undefined') return;
     const stored = localStorage.getItem(`ba-roadmap-${domainId}`);
     if (stored) {
       setCompletedNodes(JSON.parse(stored));
     }
     setIsLoaded(true);
-  };
+  }, [domainId]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadStorage();
     window.addEventListener('roadmap-progress-update', loadStorage);
     return () => window.removeEventListener('roadmap-progress-update', loadStorage);
-  }, [domainId]);
+  }, [loadStorage]);
 
   const toggleNode = (nodeId: string) => {
     const next = completedNodes.includes(nodeId) ? completedNodes.filter(id => id !== nodeId) : [...completedNodes, nodeId];

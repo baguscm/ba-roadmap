@@ -3,11 +3,6 @@
 import * as React from "react";
 import { X, Award, Search, Ghost, BookOpen } from "lucide-react";
 
-interface SkillItem {
-  name: string;
-  nodeLabel: string;
-  domainName: string;
-}
 
 interface DomainGroup {
   name: string;
@@ -127,7 +122,7 @@ export function SkillsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                 skills: skills
               });
             }
-          } catch (e) {}
+          } catch {}
         }
       }
     });
@@ -197,7 +192,7 @@ export function SkillsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
             <div className="h-full flex flex-col items-center justify-center text-center space-y-6 opacity-30 select-none py-20">
               <Ghost className="h-32 w-32 stroke-[1]" />
               <div>
-                <h3 className="text-4xl font-black tracking-tighter mb-2">It's so lonely here...</h3>
+                <h3 className="text-4xl font-black tracking-tighter mb-2">It&apos;s so lonely here...</h3>
                 <p className="text-xl font-medium max-w-sm mx-auto">Go learn something and build your professional portfolio!</p>
               </div>
               <button 
@@ -211,7 +206,7 @@ export function SkillsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
           ) : filteredGroups.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-4 opacity-30 py-20">
               <Search className="h-16 w-16" />
-              <p className="text-xl font-bold">No skills matching "{searchQuery}"</p>
+              <p className="text-xl font-bold">No skills matching &quot;{searchQuery}&quot;</p>
             </div>
           ) : (
             <div className="space-y-12 pb-8">

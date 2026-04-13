@@ -4,7 +4,6 @@ import { useMemo, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import ReactFlow, {
   Background,
-  Controls,
   Edge,
   Node,
   useNodesState,

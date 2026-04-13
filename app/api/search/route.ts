@@ -13,7 +13,22 @@ export async function GET(request: Request) {
     if (!fs.existsSync(mapsDir)) return NextResponse.json([]);
 
     const files = fs.readdirSync(mapsDir).filter(f => f.endsWith('.json'));
-    const allResults: any[] = [];
+    
+    interface SearchResult {
+      id: string;
+      label: string;
+      domain: string;
+      domainName: string;
+    }
+
+    interface MapNode {
+      id: string;
+      data?: {
+        label?: string;
+      };
+    }
+
+    const allResults: SearchResult[] = [];
 
     for (const file of files) {
       try {
@@ -23,11 +38,11 @@ export async function GET(request: Request) {
         const domainName = mapData.name || domainId;
 
         const matches = (mapData.nodes || [])
-          .filter((node: any) => 
+          .filter((node: MapNode) => 
             node.data?.label?.toLowerCase().includes(query) || 
             node.id?.toLowerCase().includes(query)
           )
-          .map((node: any) => ({
+          .map((node: MapNode) => ({
             id: node.id,
             label: node.data?.label || node.id,
             domain: domainId,

@@ -8,6 +8,12 @@ export function GlobalStats({ totalNodes }: { totalNodes: number }) {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
+  const getProgressKeys = () => {
+    return Object.keys(localStorage).filter(key => 
+      key.startsWith("ba-roadmap-")
+    );
+  };
+
   React.useEffect(() => {
     // Collect all completed nodes from localStorage for all keys that start with "roadmap-progress-"
     const updateStats = () => {
@@ -20,7 +26,7 @@ export function GlobalStats({ totalNodes }: { totalNodes: number }) {
           if (Array.isArray(data)) {
             data.forEach(nodeId => allCompletedNodes.add(nodeId));
           }
-        } catch (e) {}
+        } catch {}
       });
       
       setCompletedCount(allCompletedNodes.size);
@@ -38,12 +44,6 @@ export function GlobalStats({ totalNodes }: { totalNodes: number }) {
       window.removeEventListener("ba-progress-update", updateStats);
     };
   }, []);
-
-  const getProgressKeys = () => {
-    return Object.keys(localStorage).filter(key => 
-      key.startsWith("ba-roadmap-")
-    );
-  };
 
   const percentage = Math.min(100, Math.round((completedCount / totalNodes) * 100));
 

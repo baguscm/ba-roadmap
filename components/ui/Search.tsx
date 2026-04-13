@@ -4,10 +4,17 @@ import * as React from "react";
 import { Search as SearchIcon, X, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+interface SearchResult {
+  id: string;
+  label: string;
+  domain: string;
+  domainName: string;
+}
+
 export function Search() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
-  const [results, setResults] = React.useState<any[]>([]);
+  const [results, setResults] = React.useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const router = useRouter();
@@ -54,8 +61,8 @@ export function Search() {
         const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
         const data = await res.json();
         setResults(data.slice(0, 10));
-      } catch (e) {
-        console.error(`Search error:`, e);
+      } catch {
+        // Silently fail search errors
       } finally {
         setIsLoading(false);
       }
@@ -130,7 +137,7 @@ export function Search() {
             ) : query.length >= 2 ? (
               <div className="p-12 text-center flex flex-col items-center gap-2 opacity-30">
                 <SearchIcon className="h-8 w-8" />
-                <span className="text-xs">No results found for "{query}"</span>
+                <span className="text-xs">No results found for &quot;{query}&quot;</span>
               </div>
             ) : (
               <div className="p-12 text-center opacity-30 text-xs italic">
