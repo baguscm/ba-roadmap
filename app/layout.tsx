@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "Interactive learning paths for Business Analysts by domain.",
 };
 
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+
+import { Navbar } from "@/components/ui/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,8 +30,19 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="font-sans antialiased bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,50 @@
+---
+title: Outbound & Distribution
+domain: supply-chain
+---
+
+# Outbound & Distribution
+
+Mapped to "Manage Outbound Transportation" (APQC 6.2) and "Manage Inbound Logistics" (APQC 6.2.1) in the Global Supply Chain forum. This node governs the journey from the dock to the customer.
+
+## Node Knowledge: The Process Lifecycle
+1. **Load Optimization:** Consolidating outbound orders to maximize truck capacity (FTL) and minimize carbon footprint.
+2. **Carrier Selection (TMS):** Using a "Least Cost / Most Performance" algorithm to assign shipments to specific carriers.
+3. **Cross-docking:** Moving items directly from receiving to outbound shipping without intermediate storage.
+4. **Freight Audit:** Ensuring the bill received from the carrier matches the agreed contractual rates exactly.
+
+<DeliverableChecklist
+  id="sc-outbound-logistics"
+  items="Multi-Carrier Routing & Rate Selection Logic | Outbound Shipment Tracking Milestone Spec | Global Customs & Export Compliance Checklist | Freight Audit & Payment (FAP) Validation Rules | Distribution Network (Hub & Spoke) Logic Map"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Strategy Analysis:** determining the cost/benefit of "Same Day" delivery vs. standard shipping tiers.
+*   **Business Rules Analysis:** mapping the complex logic of "Dimensional Weight" across 15+ different global carriers.
+*   **Stakeholder Collaboration:** reconciling Finance's "Budget Caps" with Sales' "Fastest Shipping" promises.
+
+## Typical Deliverables
+
+*   **TMS Core Data Model**
+*   **Carbon Footprint Tracking Spec**
+*   **Export Documentation Master List**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The "Last Mile" isn't just the street; it's the data. As a BA, ensure your system captures "Proof of Delivery" (POD) in real-time. If you wait 24 hours for a carrier update, your customer service team will be buried in "Where is my order?" calls.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Oracle Transportation Management (OTM):** A global leader for complex, multi-modal transportation planning and execution.
+*   **SAP TM (Transportation Management):** Expertly integrates with S/4HANA to provide end-to-end outbound visibility and cost control.

@@ -30,7 +30,7 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges }: 
   // Enhance nodes with completed state dynamically
   useEffect(() => {
     setNodes((nds) => 
-      nds.map((n) => ({
+      nds?.map((n) => ({
         ...n,
         type: n.data?.type === 'sub' ? 'sub' : 'custom',
         data: {

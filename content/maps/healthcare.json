@@ -1,0 +1,43 @@
+{
+  "id": "healthcare",
+  "name": "Healthcare Systems",
+  "nodes": [
+    {
+      "id": "patient-onboarding-healthcare",
+      "data": { "label": "Patient Intake & Onboarding" },
+      "position": { "x": 100, "y": 50 }
+    },
+    {
+      "id": "insurance-verification",
+      "data": { "label": "Insurance Verification", "type": "sub" },
+      "position": { "x": 450, "y": 0 }
+    },
+    {
+      "id": "emr-management",
+      "data": { "label": "EMR/EHR Records Mgt" },
+      "position": { "x": 100, "y": 250 }
+    },
+    {
+      "id": "hipaa-compliance",
+      "data": { "label": "HIPAA & Privacy Compliance", "type": "sub" },
+      "position": { "x": 450, "y": 210 }
+    },
+    {
+      "id": "medical-billing",
+      "data": { "label": "Medical Billing & Claims" },
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "revenue-cycle-mgt",
+      "data": { "label": "Revenue Cycle Mgt (RCM)", "type": "sub" },
+      "position": { "x": 450, "y": 410 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "patient-onboarding-healthcare", "target": "emr-management", "animated": true },
+    { "id": "e2", "source": "patient-onboarding-healthcare", "target": "insurance-verification" },
+    { "id": "e3", "source": "emr-management", "target": "medical-billing", "animated": true },
+    { "id": "e4", "source": "emr-management", "target": "hipaa-compliance" },
+    { "id": "e5", "source": "medical-billing", "target": "revenue-cycle-mgt" }
+  ]
+}

@@ -1,0 +1,50 @@
+---
+title: EMR/EHR Records Mgt
+domain: healthcare
+---
+
+# EMR/EHR Records Mgt
+
+The core clinical node, mapped to "Execute Patient Logistics & Care" (APQC 7.2) and "Manage Health Information" (APQC 12.0).
+
+## Node Knowledge: The Process Lifecycle
+1. **Clinical Documentation:** Capturing structured and unstructured provider notes (SOAP notes) during patient encounters.
+2. **Order Entry (CPOE):** managing "Computerized Physician Order Entry" for labs, imaging, and prescriptions.
+3. **Medication Reconciliation:** Ensuring the patient's medication list is accurate across every transition of care.
+4. **Data Interoperability:** Exchanging clinical data between different hospital systems using HL7 FHIR standards.
+
+<DeliverableChecklist
+  id="hc-emr-mgt"
+  items="Clinical Data Schema (HL7 FHIR) Mapping | Physician Documentation (SOAP) Workflow | Medication Reconciliation (MedRec) Business Logic | Computerized Order Entry (CPOE) Transformation Map | Patient Longitudinal Record Interface Specification"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Observation:** conducting "Shadowing" sessions with clinicians to understand the "Click-burden" and UX bottlenecks.
+*   **Non-Functional Requirements:** defining the critical "High-Availability" and millisecond response-time requirements for emergency care systems.
+*   **Concept Modelling:** mapping the relationships between Patients, Providers, Encounters, and Clinical Observations.
+
+## Typical Deliverables
+
+*   **Clinical Workflow Diagram (As-Is vs To-Be)**
+*   **EMR Configuration Workbook**
+*   **Clinical Decision Support (CDS) Rule Set**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "Alert Fatigue." As a BA, don't design a system that pops up a warning for everything. If doctors get 100 alerts a day, they will start ignoring the 1 alert that actually matters for patient safety. Measure and optimize the "Actionability" of every clinical alert.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Oracle Health (formerly Cerner):** A massive, globally integrated EHR platform for acute and population health management.
+*   **Epic Systems:** The gold standard for integrated clinical records and physician-centric medical documentation workflows.

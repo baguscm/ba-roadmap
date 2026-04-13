@@ -1,10 +1,15 @@
 import RoadmapCanvas from '@/components/roadmap/RoadmapCanvas';
-import CompleteButton from '@/components/ui/CompleteButton';
+import { CompleteButton } from '@/components/ui/CompleteButton';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { DeliverableChecklist } from '@/components/ui/DeliverableChecklist';
 import React from 'react';
+
+const mdxComponents = {
+  DeliverableChecklist,
+};
 
 async function getGuideContent(id: string) {
   try {
@@ -64,8 +69,8 @@ export default async function DomainPage({ params, searchParams }: { params: Pro
                </Link>
              </div>
           </div>
-          <div className="prose prose-slate dark:prose-invert max-w-none">
-            {mdxContent ? <MDXRemote source={mdxContent} /> : <p className="opacity-50">Document not found for this node.</p>}
+          <div className="prose max-w-none prose-headings:text-primary prose-headings:font-black prose-headings:tracking-tight prose-p:text-foreground prose-p:leading-relaxed prose-li:text-foreground prose-li:my-2 prose-strong:text-foreground prose-blockquote:border-primary">
+            {mdxContent ? <MDXRemote source={mdxContent} components={mdxComponents} /> : <p className="opacity-50">Document not found for this node.</p>}
           </div>
         </div>
       )}

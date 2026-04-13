@@ -1,0 +1,50 @@
+---
+title: Insurance Verification
+domain: healthcare
+---
+
+# Insurance Verification
+
+Directly supports "Manage Financial Resources" (APQC 9.0) and "Verify Insurance Eligibility" (APQC 7.2.2). This is the primary driver of Revenue Cycle integrity.
+
+## Node Knowledge: The Process Lifecycle
+1. **Eligibility Check:** Using EDI 270/271 transactions to verify active coverage in real-time with the payer.
+2. **Prior Authorization:** Submitting clinical documentation to the insurance company to obtain approval for specialized procedures.
+3. **Benefits Coordination:** Determining which insurance is "Primary" vs "Secondary" in multi-payer scenarios.
+4. **Estimation:** Calculating the patient's "Out-of-pocket" responsibility (Deductible, Co-pay) before the service is rendered.
+
+<DeliverableChecklist
+  id="hc-insurance-verif"
+  items="Real-time Eligibility (RTE) Integration Map | Prior Authorization (PA) Approval Workflow | Coverage Gap & Co-pay Calculation Logic | Payer Contract Matrix (Network Status) | Denial Management (Pre-billing) Rule Set"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Interface Analysis:** mapping the EDI 270 (Eligibility Inquiry) and 271 (Response) fields to the internal hospital registrar screen.
+*   **Business Rules Analysis:** defining the logic for "Medical Necessity" as per individual payer contracts.
+*   **Decision Analysis:** using decision trees to automatically flag high-cost procedures that require immediate Prior-Authorization.
+
+## Typical Deliverables
+
+*   **Payer Integration Blueprint**
+*   **Patient Financial Responsibility Estimate (Template)**
+*   **Medical Necessity Rule Matrix**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Focus on "Clean Claims." As a BA, your goal is to prevent a claim from ever being mailed if the insurance isn't verified. 90% of healthcare billing denials are preventable at the "front-end" insurance verification stage. Build hard-stops into the system for missing authorization.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Availity:** A leading global health information network for real-time insurance eligibility and authorization.
+*   **Change Healthcare:** Provides massive-scale clearinghouse and claims lifecycle management solutions.

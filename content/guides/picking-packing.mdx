@@ -1,0 +1,50 @@
+---
+title: Picking & Packing
+domain: supply-chain
+---
+
+# Picking & Packing
+
+Mapped to "Manage Logistics and Warehousing" (APQC 6.4) and specifically "Pick, Pack, and Ship" (APQC 6.4.3). This is the high-velocity execution layer of fulfillment.
+
+## Node Knowledge: The Process Lifecycle
+1. **Wave Management:** Releasing orders in batches (waves) to the floor to maximize picking efficiency.
+2. **Directed Picking:** Navigating the warehouse via mobile instructions using methodologies like Zone, Cluster, or Discrete picking.
+3. **Quality Validation:** Scanning items at the packing station to ensure 100% accuracy before the box is taped.
+4. **Manifesting:** Generating shipping labels and carrier documentation (Bol, Manifest) in real-time.
+
+<DeliverableChecklist
+  id="sc-picking-packing"
+  items="Order Wave Release Logic Matrix | Picking Methodology (Zone / Cluster) Spec | Packing Validation & Error-Check Rules | Dimensional Weight (DIM) Calculation Logic | Shipping Label & Manifest API Integration Map"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Process Analysis:** identifying bottlenecks at the packing station (e.g. searching for the right box size).
+*   **Interface Analysis:** mapping scanner data (GS1-128 barcodes) to the WMS inventory decrement logic.
+*   **Prototyping:** designing intuitive "Hands-free" picking interfaces (Voice-to-pick or AR glasses).
+
+## Typical Deliverables
+
+*   **Packing Station Layout Design**
+*   **Order-to-Pack Cycle Time Analysis**
+*   **Carrier Shipping Label Specifications**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't forget about "Box Suitability." As a BA, ensure your system suggests the smallest possible box for every order. If you ship a USB stick in a laptop box, you are paying for air and destroying your outbound margins.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Zebra Technologies (Velocity):** Expertly enhances mobile picking productivity through ruggedized hardware and optimized UI.
+*   **Descartes:** A leading global platform for shipping, manifesting, and multi-carrier parcel management.

@@ -12,6 +12,24 @@
   --subnode-bg: #f3f4f1;
   --subnode-border: #d1d5db;
   --subnode-text: #4b5563;
+  
+  /* Typography fallback */
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-lead: var(--foreground);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--primary);
+  --tw-prose-bullets: var(--primary);
+  --tw-prose-hr: var(--node-border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--primary);
+  --tw-prose-captions: var(--subnode-text);
+  --tw-prose-code: var(--primary);
+  --tw-prose-pre-code: var(--primary-foreground);
+  --tw-prose-pre-bg: var(--foreground);
+  --tw-prose-th-borders: var(--node-border);
+  --tw-prose-td-borders: var(--node-border);
 }
 
 @theme inline {
@@ -29,19 +47,42 @@
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1c1e;
-    --foreground: #e2e8f0;
-    --primary: #86a389;
-    --primary-foreground: #1a1c1e;
-    --node-bg: #2d2f31;
-    --node-border: #3f4144;
-    --node-completed: #a3b8a6;
-    --subnode-bg: #242628;
-    --subnode-border: #3f4144;
-    --subnode-text: #cbd5e1;
-  }
+.dark {
+  --background: #1a1c1e;
+  --foreground: #e2e8f0;
+  --primary: #86a389;
+  --primary-foreground: #1a1c1e;
+  --node-bg: #2d2f31;
+  --node-border: #3f4144;
+  --node-completed: #a3b8a6;
+  --subnode-bg: #242628;
+  --subnode-border: #3f4144;
+  --subnode-text: #cbd5e1;
+
+  /* Typography Dark Mode */
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-lead: var(--foreground);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--primary);
+  --tw-prose-bullets: var(--primary);
+  --tw-prose-hr: var(--node-border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--primary);
+  --tw-prose-captions: var(--subnode-text);
+  --tw-prose-code: var(--primary);
+  --tw-prose-pre-code: var(--primary-foreground);
+  --tw-prose-pre-bg: var(--foreground);
+  --tw-prose-th-borders: var(--node-border);
+  --tw-prose-td-borders: var(--node-border);
+}
+
+/* Global transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 body {

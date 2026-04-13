@@ -1,0 +1,50 @@
+---
+title: Smart Grid Operations
+domain: energy
+---
+
+# Smart Grid Operations
+
+Aligned with "Manage Logistics" (APQC 6.0) and "Maintain Grid Infrastructure" (APQC 6.4) in the Utility Management framework. This is the nervous system of the power network.
+
+## Node Knowledge: The Process Lifecycle
+1. **Network Monitoring:** Utilizing SCADA and IoT sensors to maintain real-time visibility into grid frequency and voltage.
+2. **Outage Management (OMS):** Automating the detection and reporting of power failures (Outages) to restoration crews.
+3. **Automated Restoration (FLISR):** Executing "Fault Location, Isolation, and Service Restoration" (FLISR) to re-route power around a fault within seconds.
+4. **AMI Data Capture:** Managing the "Advanced Metering Infrastructure" (Smart Meters) that bi-directionally communicate with the customer edge.
+
+<DeliverableChecklist
+  id="energy-grid-ops"
+  items="Grid Topology & Connectivity Logic Map | Outage Management System (OMS) Workflow | FLISR (Fault Isolation & Restoration) Logic | ADMS (Advanced Distribution Mgt) Hierarchy | AMI (Advanced Metering) Data Integration Map"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Interface Analysis:** mapping the data flow between field sensors (IEDs), the central SCADA system, and the customer billing portal.
+*   **Prototyping:** designing intuitive "Grid Visualization" UIs that allow operators to see hotspots and load-imbalances instantly.
+*   **Risk Analysis:** modeling the vulnerability of the grid to cyber-attacks or severe weather events (e.g. wildfires).
+
+## Typical Deliverables
+
+*   **Distribution Automation (DA) Strategy**
+*   **Smart Meter Deployment Roadmap**
+*   **Load Flow & Stability Dashboard Spec**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Focus on "Interoperability." As a BA, ensure your field devices follow standard protocols like DNP3 or IEC 61850. If you build a proprietary, non-standard grid, you will be locked into a single vendor for 30 years.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Schneider Electric (EcoStruxure ADMS):** The industry standard for integrated, intelligent grid management and restoration.
+*   **ABB Ability:** A modular, cloud-connected suite for grid automation and distributed energy management.

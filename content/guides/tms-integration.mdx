@@ -1,0 +1,50 @@
+---
+title: TMS & Carrier Mgt
+domain: supply-chain
+---
+
+# TMS & Carrier Management
+
+Directly supports "Manage Outbound Transportation" (APQC 6.2) and "Select and Manage Carriers" (APQC 6.2.2). This node targets the technical integration of transportation systems.
+
+## Node Knowledge: The Process Lifecycle
+1. **API Integration:** Connecting the ERP/WMS to carrier platforms (UPS, FedEx, DHL, Maersk) to retrieve real-time rates and labels.
+2. **Load Tendering:** Automated offering of shipments to carriers based on pre-defined regional and price priority rules.
+3. **Execution & Tracking:** Capturing real-time transit status via EDI 214 (Transportation Carrier Shipment Status) messages.
+4. **Spot Market Biding:** managing "Mini-auctions" for urgent or specialized loads that fall outside of long-term carrier contracts.
+
+<DeliverableChecklist
+  id="sc-tms-mgt"
+  items="Carrier API Integration Specification (Real-time Rates) | Load Tendering & Automated Acceptance Workflow | Multi-modal Freight Optimization Logic | Carrier SLA & Performance Dashboard Matrix | Spot Market Bidding & Auction Logic Spec"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Interface Analysis:** mapping thousands of disparate carrier error-codes into a unified user-friendly "System Message" (e.g. "Address Invalid").
+*   **Data Modelling:** designing the "Rate Table" architecture that can handle seasonal surcharges and fuel adjustments.
+*   **Non-Functional Requirements:** defining the millisecond responsiveness required for "Real-time Rating" during website checkout.
+
+## Typical Deliverables
+
+*   **EDI Mapping Guide (204, 214, 210)**
+*   **Carrier Selection Priority Matrix**
+*   **Transportation Cost Variance Report**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't over-integrate. As a BA, don't build 50 direct carrier APIs. Implement a "Shipping Aggregator" (e.g. ShipStation, ShippyPro) that gives you 100 carriers through a single API connection. It reduces your technical debt by 90%.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **E2open (formerly BluJay):** A massive, global carrier network and transportation management ecosystem.
+*   **MercuryGate:** Specialized in multi-modal freight orchestration and complex broker-managed logistics.

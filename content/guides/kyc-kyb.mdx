@@ -5,7 +5,12 @@ domain: fintech
 
 # KYC/KYB & Identity Verification
 
-Directly linked to "Manage Risk and Compliance" and "Customer Onboarding" within financial services frameworks like APQC for Banking.
+**APQC Process Reference:** 3.1.2 (Identify and understand customers)
+
+<DeliverableChecklist 
+  id="fintech-kyc"
+  items="KYC Decision Flow Diagram | PII Data Sensitivity Matrix | API Field Mapping (Front-end to Provider) | Sanction Screening Rule Definitions | Exception Handling Process Flow"
+/>
 
 ## Node Knowledge: The Process Lifecycle
 1. **Data Collection:** Capturing government-issued IDs (passports, licenses) and liveness biometrics.
@@ -15,31 +20,24 @@ Directly linked to "Manage Risk and Compliance" and "Customer Onboarding" within
 
 ---
 
-## Key BA Activities (BABOK® Alignment)
+## 📈 Key BA Activities (BABOK® Alignment)
 
-In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
-
-*   **Non-Functional Requirements:** Defining maximum latency for a "Pass/Fail" decision (e.g., < 30 seconds).
-*   **Interface Analysis:** Mapping complex JSON data fields between the mobile app and the KYC API.
-*   **Risk Analysis:** Assessing the business impact of "False Positives" on customer drop-off.
-
-## Typical Deliverables
-
-*   **KYC Decision Flow Chart**
-*   **PII Data Privacy Mapping**
-*   **Identity Verification UI Wireframes**
+*   **Strategy Analysis (BABOK® 6.0):** Defining the risk appetite of the institution vs. customer friction.
+*   **Requirements Life Cycle Management (BABOK® 5.0):** Ensuring compliance requirements are traceable from policy to implementation.
+*   **Non-Functional Requirements:** Defining data privacy standards (GDPR/SOC2) and high-availability SLAs for real-time verification.
 
 ---
 
-## 💡 Expert BA Review & Adjustments
+## 💡 Expert BA Review
 
 > [!TIP]
 > **From the Desk of a Lead Business Analyst**
-> BAs must design for "Liveness." Static photos are easily faked. Ensure your requirements for the identity flow include active liveness checks (e.g., "turn your head" or "blink") to prevent spoofing attacks.
+> Don't just follow legal's instructions. As a BA, you must identify the "Secondary Identification" path. If a user fails automated verification, what's the manual fallback? If you don't design this, you'll see a 30% drop-off in your conversion funnel.
 
 ---
 
 ## Enterprise Software Implementation Reference
 
-*   **Onfido:** A market leader in AI-driven identity verification and biometric liveness checks.
-*   **Jumio:** A comprehensive identity platform for high-security financial and gaming onboarding workflows.
+*   **Salesforce Financial Services Cloud:** Often the "System of Record" that triggers KYC workflows.
+*   **Fenergo:** The industry leader in CLM (Client Lifecycle Management) for institutional banking.
+*   **Pega KYC:** Rules-driven workflow engine for complex global regulatory compliance.

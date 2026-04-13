@@ -1,0 +1,50 @@
+---
+title: Medical Billing & Claims
+domain: healthcare
+---
+
+# Medical Billing & Claims
+
+Mapped to "Manage Financial Resources" (APQC 9.0) and "Execute Billing & Claims" (APQC 7.2.2). This is the high-volume transaction layer of Healthcare.
+
+## Node Knowledge: The Process Lifecycle
+1. **Charge Capture:** Aggregating clinical services, medications, and equipment usage from the EMR for billing conversion.
+2. **Coding (ICD-10/CPT):** Translating clinical descriptions into standardized medical codes to ensure payer processing.
+3. **Claim Scrubbing:** Validating claims against thousands of "Payer-Specific Rules" to find errors before submission.
+4. **Claims Submission (EDI 837):** Transmitting the digital 837P (Professional) or 837I (Institutional) file to the insurance clearinghouse.
+
+<DeliverableChecklist
+  id="hc-medical-billing"
+  items="Claim Scrubbing & Validation Business Logic | EDI 837 (Claims) Field Integration Map | EDI 835 (Remittance) Auto-Posting Rules | CPT & ICD-10 Code-to-Charge Mapping Table | Payer-Specific Billing Rule Engine Spec"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Interface Analysis:** mapping the flow of "Charges" from the clinical EMR to the financial Billing system.
+*   **Business Rules Analysis:** documenting the "Modifier" rules (e.g. Modifier 25) that change the reimbursement value of a claim.
+*   **Data Analysis:** tracking the "First Pass Yield" (claims paid on the first submission) to identify systemic coding errors.
+
+## Typical Deliverables
+
+*   **Charge Master (CDM) Data Specification**
+*   **Billing Interface Blueprint**
+*   **Claims Scrubbing Error-Code Catalog**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Coding is the bottleneck. As a BA, your goal is "Auto-coding" where possible. If a clinician enters a specific "Procedure" in the EMR, the system should suggest the most likely CPT code automatically. Reducing manual coding reduces human error and speeds up your cash flow.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Quadax:** A leading healthcare revenue cycle platform focused on complex medical billing and claims management.
+*   **Waystar:** A massive global clearinghouse and RCM platform that simplifies the claims submission and remittance cycle.

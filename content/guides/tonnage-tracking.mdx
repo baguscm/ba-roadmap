@@ -1,0 +1,50 @@
+---
+title: Tonnage & Yield Tracking
+domain: mining
+---
+
+# Tonnage & Yield Tracking
+
+Associated with "Manage Performance" (APQC 12.5) and "Control Operations" (APQC 4.0) in the Mining sector. This is the inventory-accuracy layer of the mine.
+
+## Node Knowledge: The Process Lifecycle
+1. **Physical Weighing:** Capturing the raw weight of ore via weighbridges (trucks) or belt-scales (conveyors).
+2. **Moisture Adjustment:** Calculating the "Dry Metric Tonnage" (DMT) by subtracting the moisture content from the "Wet Metric Tonnage" (WMT).
+3. **Yield Reconciliation:** Comparing the "In-situ" (what was in the ground) to the "Actual Production" (what was mined) to measure recovery efficiency.
+4. **Mass Balance:** Ensuring the "Input" (Mined ore) minus "Waste" equals the "Output" (Final product) across the entire processing plant.
+
+<DeliverableChecklist
+  id="mining-tonnage"
+  items="Weighbridge & Belt-scale Calibration Logic | Production Yield Reconciliation (In-situ vs Outbound) | Moisture Adjustment Factor (MAF) Business Rules | Real-time Yield Variance Automated Alert System | Historical Tonnage & Recovery Performance Model"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Risk Analysis:** modeling the financial risk of "Belt-scale Drift" where the system incorrectly measures millions of tons of material.
+*   **Data Analysis:** analyzing "Weightometer" data to identify slow-downs in the processing plant.
+*   **Stakeholder Collaboration:** reconciling the Production team's "Mined Tonnage" with the Logistics team's "Shipped Tonnage."
+
+## Typical Deliverables
+
+*   **Mass Balance Reconciliation Report**
+*   **Tonnage Measurement System Architecture**
+*   **Moisture-to-Dry Conversion Logic Spec**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't trust the scale. As a BA, ensure your system has a "Calibration Schedule." These scales are exposed to rain, dust, and vibration. If you don't build an automated reminder for physical calibration, your entire "Source of Truth" for revenue will be wrong within 30 days.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Thermo Fisher Scientific:** Provides high-precision bulk-material weigh-scales and automated moisture analysis systems.
+*   **Emerson (Rosemount):** A leader in high-reliability industrial measurement and telemetry solutions for complex processing plants.

@@ -1,0 +1,50 @@
+---
+title: Warehouse Management (WMS)
+domain: supply-chain
+---
+
+# Warehouse Management (WMS)
+
+Associated with "Manage Logistics and Warehousing" (APQC 6.4). The orchestrator of physical inventory movement and storage optimization.
+
+## Node Knowledge: The Process Lifecycle
+1. **Receiving & Put-away:** Validating inbound goods and directing them to the optimal storage bin based on volume/velocity.
+2. **Inventory Management:** Maintaining the integrity of the "Digital Twin" of the physical warehouse stock.
+3. **Picking & Packing:** Executing the selection of items for outbound orders using various methodologies (Wave, Cluster, Zone).
+4. **Labor Management:** Tracking and optimizing the productivity of the workforce across travel time and tasks.
+
+<DeliverableChecklist
+  id="sc-warehouse-mgt"
+  items="WMS Bin & Zone Storage Hierarchy Logic | Labor Management System (LMS) Functional Requirements | Inventory Slotting Optimization Rule Set | Wave Picking & Order Orchestration BPMN Flow | Physical vs System Stock Variance Audit Report"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+In alignment with the *Business Analysis Body of Knowledge (BABOK®)*, mastering this node relies on the following knowledge areas and techniques:
+
+*   **Observation:** conducting "Day-in-the-Life" (DILO) studies of warehouse pickers to identify UI bottlenecks.
+*   **Non-Functional Requirements:** defining the Wi-Fi/Radio-Frequency coverage requirements for mobile scanners in high-density rack areas.
+*   **Data Modelling:** mapping the complex relationships between Items, Bins, Lots, and Unit-of-Measure (UOM).
+
+## Typical Deliverables
+
+*   **Warehouse Heat Map (Inventory Velocity)**
+*   **WMS-to-ERP Integration Mapping Document**
+*   **Picking Mobile App Wireframes**
+
+---
+
+## 💡 Expert BA Review & Adjustments
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Travel time is your biggest cost. As a BA, focus your efforts on "Slotting Optimization." If a picker has to walk 100 meters to get the most popular item in the warehouse, the system has failed. Popularity changes; your Bin mapping should too.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Manhattan Active WM:** The world-leading cloud-native warehouse orchestration platform.
+*   **Blue Yonder WMS:** A robust, massive-scale solution focusing on complex retail and multi-node distributions.
