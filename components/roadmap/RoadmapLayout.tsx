@@ -58,18 +58,38 @@ export function RoadmapLayout({ domainId, initialNodes, initialEdges, nodeId, md
              <RoadmapCanvas domainId={domainId} initialNodes={initialNodes} initialEdges={initialEdges} showLegend={showLegend} />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {initialNodes.filter(n => !n.id.includes('hidden')).map(node => (
-              <button 
-                key={node.id} 
-                onClick={() => router.push(`?node=${node.id}`, { scroll: false })}
-                className={`flex items-center gap-4 p-4 rounded-xl border text-left transition-all ${nodeId === node.id ? "border-primary bg-primary/5 shadow-md scale-[1.02]" : "border-node-border hover:border-primary/50 bg-background"}`}
-              >
-                <div className={`w-3 h-3 rounded-full flex-shrink-0 ${node.data.level === 'advanced' ? 'bg-indigo-500' : 'bg-emerald-500'}`} />
-                <span className="font-bold flex-1">{node.data.label}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-20"><path d="m9 18 6-6-6-6"/></svg>
-              </button>
-            ))}
+          <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            {initialNodes.filter(n => !n.id.includes('hidden') && !n.data?.hidden).map(node => {
+              const isSub = node.data.type === 'sub';
+              return (
+                <button 
+                  key={node.id} 
+                  onClick={() => router.push(`?node=${node.id}`, { scroll: false })}
+                  className={`flex items-center gap-4 p-4 rounded-xl border text-left transition-all group ${
+                    nodeId === node.id 
+                      ? "border-primary bg-primary/5 shadow-md scale-[1.01]" 
+                      : "border-node-border hover:border-primary/50 bg-background"
+                  } ${isSub ? "ml-10 py-3 mb-1" : "mt-4"}`}
+                >
+                  <div className={`flex-shrink-0 flex items-center justify-center ${isSub ? "w-5 h-5" : "w-6 h-6"}`}>
+                    {isSub ? (
+                      <div className="flex items-center">
+                        <div className="w-4 h-px bg-node-border mr-2" /> {/* Horizontal connector */}
+                        <div className="w-2 h-2 rounded-full bg-primary/20 group-hover:bg-primary/40 transition-colors" />
+                      </div>
+                    ) : (
+                      <div className={`w-3.5 h-3.5 rounded-full ring-4 ring-primary/5 ${node.data.level === 'advanced' ? 'bg-indigo-500' : 'bg-emerald-500'}`} />
+                    )}
+                  </div>
+                  <span className={`flex-1 ${isSub ? "text-sm font-medium text-foreground/80" : "font-extrabold text-lg"}`}>
+                    {node.data.label}
+                  </span>
+                  {!isSub && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-20 group-hover:opacity-100 transition-opacity text-primary"><path d="m9 18 6-6-6-6"/></svg>
+                  )}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

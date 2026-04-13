@@ -57,16 +57,32 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges, sh
   // Responsive fitView options
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
   const responsiveFitViewOptions = useMemo(() => ({
-    padding: isMobile ? 0.25 : 0.1,
+    padding: 0.15,
     minZoom: isMobile ? 0.35 : 0.9,
     maxZoom: 1.1,
-    includeHiddenNodes: false
+    includeHiddenNodes: true // Must be true to allow the spacer to push content up
   }), [isMobile]);
+
+  // Inject a spacer node on mobile to push content to the top
+  const nodesWithSpacer = useMemo(() => {
+    if (!isMobile || nodes.length === 0) return nodes;
+    const maxY = Math.max(...nodes.map(n => n.position.y));
+    return [
+      ...nodes,
+      {
+        id: 'mobile-spacer',
+        type: 'custom',
+        position: { x: 100, y: maxY + 500 }, // Push bottom boundary 500px down
+        data: { label: '', hidden: true },
+        style: { visibility: 'hidden', opacity: 0, pointerEvents: 'none' }
+      }
+    ] as Node[];
+  }, [nodes, isMobile]);
 
   return (
     <div className="w-full border border-node-border rounded-xl shadow-sm bg-background overflow-hidden" style={{ height: `${contentHeight}px` }}>
       <ReactFlow
-        nodes={nodes}
+        nodes={nodesWithSpacer}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
