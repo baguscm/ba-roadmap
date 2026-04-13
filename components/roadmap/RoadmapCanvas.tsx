@@ -54,6 +54,15 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges, sh
     router.push(`?node=${node.id}`, { scroll: false });
   }, [router]);
 
+  // Responsive fitView options
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+  const responsiveFitViewOptions = useMemo(() => ({
+    padding: isMobile ? 0.25 : 0.1,
+    minZoom: isMobile ? 0.35 : 0.9,
+    maxZoom: 1.1,
+    includeHiddenNodes: false
+  }), [isMobile]);
+
   return (
     <div className="w-full border border-node-border rounded-xl shadow-sm bg-background overflow-hidden" style={{ height: `${contentHeight}px` }}>
       <ReactFlow
@@ -72,12 +81,8 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges, sh
         preventScrolling={false}
         className="bg-background/50 pointer-events-auto"
         fitView
-        fitViewOptions={{ 
-          padding: 0.1,
-          minZoom: 0.9,
-          maxZoom: 1.1
-        }}
-        minZoom={0.5}
+        fitViewOptions={responsiveFitViewOptions}
+        minZoom={0.2}
         maxZoom={1.5}
       >
         <Background color="#ccc" gap={16} />
