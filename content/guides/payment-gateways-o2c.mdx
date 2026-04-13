@@ -1,0 +1,46 @@
+---
+title: Payment Gateways & Rails
+domain: o2c-b2c
+---
+
+# Payment Gateways & Rails
+
+In **Advanced B2C**, **Payment Gateways** are the digital cashier of the **O2C** cycle. They provide the infrastructure to securely authorize, capture, and settle digital payments across various channels (Web, Mobile, App) while ensuring data security via tokenization.
+
+## Node Knowledge: The Payment Lifecycle
+1. **Authorization:** Temporarily booking the funds on the customer's card at the time of order.
+2. **Capture:** Instructing the bank to actually transfer the authorized funds once the order is shipped.
+3. **Refund/RMA:** Processing credit back to the original payment method for returned goods.
+4. **Fraud Screening:** Using real-time AI to assess the risk of a transaction before authorization.
+
+<DeliverableChecklist
+  id="payment-gateways-advanced"
+  items="Payment Orchestration Workflow | PCI-DSS Compliance Certification | Fraud Risk Scoring Rules | Multi-Currency Settlement Matrix | Reversal & Refund Logic Flow"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Defining the fraud thresholds—when should an order be automatically canceled vs. flagged for human review.
+*   **Requirements Modeling:** Detailing the data flow between the E-commerce checkout, the Payment Gateway, and the backend ERP.
+
+## Typical Deliverables
+
+*   **Payment State Map:** Showing the transition of payment status (Authorized -> Captured -> Settled -> Refunded).
+*   **Settlement Reconciliation Spec:** Showing how to match bank deposits to captured gateway transactions.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Minimize "Payment Latency". If your gateway takes too long to respond during a flash sale, the customer will abandon the cart. As a BA, you must define the non-functional requirements for API response times and ensure your system can handle "Asynchronous Capture" for high-volume transactions.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Stripe:** A developer-favorite platform offering seamless integration and advanced fraud protection.
+*   **Adyen:** A global payment platform used by massive enterprises to manage omnichannel payments in a single system.

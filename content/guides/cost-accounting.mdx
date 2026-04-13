@@ -1,0 +1,47 @@
+---
+title: Manufacturing Cost Accounting
+domain: plan-to-produce
+---
+
+# Manufacturing Cost Accounting
+
+In **Plan to Produce**, **Cost Accounting** is the financial mirror of physical manufacturing. It involves tracking the actual cost of labor, materials, and overhead for every production order, enabling the company to calculate its "Value Added" and the accurate value of its work-in-progress (WIP) and finished goods inventory.
+
+## Node Knowledge: The Financial Value Chain
+1. **Standard Costing:** Estimating the cost of a product *before* you make it (BOM + Activity Rates).
+2. **Actual Costing:** Tracking exactly what you spent *while* you were making it.
+3. **Variance Analysis:** Calculating the difference between Standard and Actual (Material variance, Labor efficiency variance).
+4. **WIP (Work in Progress):** Valuing the materials and labor currently on the factory floor that haven't become finished goods yet.
+5. **Overhead Allocation:** Spreading fixed costs (Electricity, Rent, Supervision) across the manufacturing volume.
+
+<DeliverableChecklist
+  id="cost-accounting-basics"
+  items="Activity Rate Calculation (Labor/Machine hour) | Product Cost Estimate (Standard Cost) | WIP (Work-in-Progress) Valuation Report | Production Order Variance Analysis Matrix | Month-end Manufacturing Settlement Flow"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing "Cost Object Controlling" to identify which specific production lines or products are losing money.
+*   **Requirements Modeling:** ensuring that every physical scrap or labor confirmation on the shop floor correctly triggers a financial posting in the General Ledger.
+
+## Typical Deliverables
+
+*   **Costing Sheet Spec:** detailing how overhead percentages are applied to different product categories.
+*   **Inventory Valuation Flow:** showing the movement of value from Raw Materials -> WIP -> Finished Goods -> COGS.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "Labor Over-reporting". If operators report more hours than they actually worked to hide inefficiencies, your product costs will be artificially high, and you might price yourself out of the market. As a BA, your goal is to reconcile "Shop Floor Hours" with "Payroll Hours" to ensure financial integrity.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Controlling - CO-PC):** The most robust product costing engine in the world, capable of handling complex multinational manufacturing valuations.
+*   **Oracle ERP Cloud (Cost Management):** Provides deep visibility into supply chain costs and automated variance reporting.

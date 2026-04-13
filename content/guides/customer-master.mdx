@@ -1,0 +1,47 @@
+---
+title: Customer Master Data
+domain: o2c-basic
+---
+
+# Customer Master Data
+
+In the **Order to Cash (O2C)** cycle, the **Customer Master** is the foundational "Golden Record" that enables all downstream activities. Without accurate customer data, billing fails, shipping is delayed, and credit risk cannot be managed.
+
+## Node Knowledge: The Data Lifecycle
+1. **Onboarding:** Collecting legal entity names, tax IDs (VAT/GST), and contact info.
+2. **Standardization:** Ensuring addresses follow global standards (e.g., ISO) for freight accuracy.
+3. **Internal Hierarchy:** Mapping the "Bill-to", "Ship-to", and "Payer" relationship.
+4. **Maintenance:** Updating bank details and credit status periodically.
+
+<DeliverableChecklist
+  id="customer-master-basics"
+  items="Customer Onboarding Form (Field Mapping) | Shipping vs. Billing Address Validation Rules | Tax ID Verification Workflow (e.g., VIES integration) | Customer Account Hierarchy Diagram | Master Data Governance Policy"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Requirement Analysis:** Defining the mandatory fields required by the ERP vs. the CRM.
+*   **Data Modelling:** Documenting the entity relationships (Account vs. Contact vs. Address).
+*   **Process Analysis:** Identifying bottlenecks in the "New Customer Setup" workflow that delay the first Sales Order.
+
+## Typical Deliverables
+
+*   **Data Dictionary:** A detailed list of all customer fields, their data types, and validation logic.
+*   **Data Migration Plan:** Strategy for cleaning and moving customer records from legacy systems to the new environment.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't underestimate the complexity of "Customer Hierarchies". A customer might be a small branch office, but they are owned by a global parent. You must define early in the project *who* receives the invoice and *where* the goods are physically delivered. Getting the Bill-To/Ship-To relationship wrong is the #1 cause of payment disputes.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Salesforce CRM:** The industry standard for capturing early-stage customer data.
+*   **SAP S/4HANA (CMD):** Centralized Master Data Management (MDM) module built to sync customer records across global manufacturing and finance hubs.

@@ -1,0 +1,46 @@
+---
+title: Quality Control & Inspection
+domain: plan-to-produce
+---
+
+# Quality Control & Inspection
+
+In **Plan to Produce**, **Quality Control (QC)** is the regulatory and brand guardrail. It involves the systematic inspection of raw materials, in-process goods, and finished products to ensure they meet engineering specifications and safety standards before being released to customers.
+
+## Node Knowledge: The Compliance Filter
+1. **Inspection Plans:** Defining *what* to check (Dimensions, Weight, Color, Chemical composition) and the "Acceptable Quality Level" (AQL).
+2. **In-Process Inspection:** Testing products during the manufacturing cycle (e.g., checking a car's alignment before the seats are installed).
+3. **Quality Notifications:** Formalizing the process when an item fails a test—triggering a "Rework" or "Scrap" decision.
+4. **Certificates of Analysis (CoA):** generating the legal documentation that proves a product meets the specs for the customer.
+
+<DeliverableChecklist
+  id="quality-control-basics"
+  items="Inspection Characteristic Master List | Sampling Plan Logic (e.g., test 1 in 100) | Non-Conformance Report (NCR) Workflow | Quality Notification Reason Codes | Certificate of Analysis (CoA) Template"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Assessing the "Cost of Poor Quality"—identifying the financial impact of a product recall vs. the cost of more rigorous testing.
+*   **Requirements Modeling:** Defining the "Calibration" requirements for the testing instruments used on the floor.
+
+## Typical Deliverables
+
+*   **Inspection Flowchart:** showing the decision tree for "Pass" vs. "Fail" vs. "Rework".
+*   **Quality SPC Dashboard:** Visualizing "Statistical Process Control" (e.g., tracking a machine's drift before it starts making bad parts).
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't inspect everything. "100% Inspection" is slow and expensive. As a BA, your goal is to help the business implement "Risk-Based Sampling". If a vendor has been perfect for 5 years, inspect only 1% of their goods. If a machine is starting to show variance, increase the testing frequency. Automation is your friend here—use sensors and computer vision where possible.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Quality Management - QM):** deeply integrated with Procurement and Production to trigger inspections automatically.
+*   **MasterControl:** A leading Quality Management System (QMS) specifically designed for life sciences and regulated manufacturing.

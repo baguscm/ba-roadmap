@@ -1,0 +1,46 @@
+---
+title: Fixed Asset Capitalization
+domain: p2p-assets
+---
+
+# Fixed Asset Capitalization
+
+In **Advanced P2P with Assets**, **Capitalization** is the process of converting a purchase (Expense) into a long-term balance sheet item (Fixed Asset). This happens when a purchase meets the company's "Capitalization Threshold" for value and useful life.
+
+## Node Knowledge: The Balance Sheet Conversion
+1. **Capitalization Hierarchy:** Defining the structure (Main Asset vs. Sub-Assets).
+2. **Value Inclusion:** Determining which costs (Shipping, Installation, Training) can be added to the asset's "Base Value."
+3. **Asset Master Data:** Capturing serial numbers, physical location, and responsible department.
+4. **Capital Work in Progress (CWIP):** Managing assets that are being "built" over time before being finalized.
+
+<DeliverableChecklist
+  id="asset-capitalization-advanced"
+  items="Capitalization Threshold Policy (e.g., >$5,000) | Asset Class Mapping Table | Installed Base (IBase) Data Structure | CWIP (Work-in-Progress) Reconciliation Process | Asset Tagging & Physical Verification Procedure"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing the impact of "Capitalizing" vs. "Expensing" on the company's P&L statement.
+*   **Requirements Modeling:** Ensuring the integration between a Purchase Order (PO) and the Fixed Asset (FA) module is seamless.
+
+## Typical Deliverables
+
+*   **Asset Class Catalog:** A list of asset categories (Computers, Machinery, Vehicles) with their standardized accounting rules.
+*   **Capitalization Decision Tree:** A tool for buyers to determine if a purchase should hit the balance sheet.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "Bundle Purchases". If you buy 100 laptops for $1,000 each, but your threshold is $5,000, do you capitalize the bundle? Usually, no—capitalization is per physical unit. As a BA, you must define the "Unit of Measure" for your asset policies to prevent auditors from flagging thousands of small expenses that are currently sitting on your balance sheet.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Finance (Asset Accounting - FI-AA):** Highly granular control over capitalization dates and value adjustments.
+*   **Sage Fixed Assets:** A dedicated, popular solution for companies that need deep reporting without a full-tier ERP.

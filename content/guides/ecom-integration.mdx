@@ -1,0 +1,46 @@
+---
+title: E-Com Front-to-Back Sync
+domain: o2c-b2c
+---
+
+# E-Com Front-to-Back Sync
+
+In **Advanced B2C**, **Front-to-Back Sync** is the critical glue between the digital storefront and the physical supply chain. It ensures that data flows seamlessly between the customer's web experience and the backend ERP system for inventory, pricing, and order fulfillment.
+
+## Node Knowledge: The Omni-channel Sync
+1. **Inventory Visibility:** Pushing real-time stock levels from the warehouse to the web storefront to prevent overselling.
+2. **Order Injection:** Mapping the website checkout payload into the ERP Sales Order structure.
+3. **Status Feedback:** Pushing fulfillment updates (Shipped, Tracking #, Out for Delivery) back to the customer's online account.
+4. **Master Data Sync:** Ensuring product names, descriptions, and prices are identical on both platforms.
+
+<DeliverableChecklist
+  id="ecom-sync-advanced"
+  items="Inventory Buffer (Safety Stock) Logic | API Endpoint Documentation (Web-to-ERP) | Web order ID vs. ERP order ID mapping | Real-time Pricing Sync Specification | Order Status Tracking Web-hook Flow"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Interface Analysis:** Defining the JSON/XML payloads for every touchpoint between the storefront and the ERP.
+*   **Requirements Validation:** Ensuring the "Guest Checkout" vs. "LoggedIn" flows are correctly handled in the backend database.
+
+## Typical Deliverables
+
+*   **Data Flow Diagram:** showing the lifecycle of an order from "Cart" to "Delivery".
+*   **Error Queue Dashboard Spec:** Designing how the business monitors failed order syncs.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "Race Conditions". If two customers buy the last item at the exact same millisecond, which order fails? As a BA, you must define the "Inventory Lock" logic—does a cart hold an item? Or is it first-come, first-served at the "Place Order" click?
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Shopify Plus / ERP Connector:** Common middleware for syncing retail storefronts with Microsoft or NetSuite backends.
+*   **SAP Commerce Cloud (Spartacus):** An enterprise-grade headless commerce platform designed for tight integration with the SAP S/4HANA core.

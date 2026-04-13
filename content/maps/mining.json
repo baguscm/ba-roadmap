@@ -4,40 +4,101 @@
   "nodes": [
     {
       "id": "exploration-planning",
-      "data": { "label": "Exploration & Planning" },
-      "position": { "x": 100, "y": 50 }
+      "data": {
+        "label": "Exploration & Planning",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 50
+      }
     },
     {
       "id": "geospatial-data",
-      "data": { "label": "Geospatial Data Mgt", "type": "sub" },
-      "position": { "x": 450, "y": 0 }
+      "data": {
+        "label": "Geospatial Data Mgt",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 0
+      }
     },
     {
       "id": "extraction-ops",
-      "data": { "label": "Extraction Operations" },
-      "position": { "x": 100, "y": 250 }
+      "data": {
+        "label": "Extraction Operations",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 250
+      }
     },
     {
       "id": "safety-compliance-mining",
-      "data": { "label": "HSSE & Safety Compliance", "type": "sub" },
-      "position": { "x": 450, "y": 210 }
+      "data": {
+        "label": "HSSE & Safety Compliance",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 210
+      }
     },
     {
       "id": "logistics-shipping-mining",
-      "data": { "label": "Logistics & Ore Shipping" },
-      "position": { "x": 100, "y": 450 }
+      "data": {
+        "label": "Logistics & Ore Shipping",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 450
+      }
     },
     {
       "id": "tonnage-tracking",
-      "data": { "label": "Tonnage & Yield Tracking", "type": "sub" },
-      "position": { "x": 450, "y": 410 }
+      "data": {
+        "label": "Tonnage & Yield Tracking",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 410
+      }
     }
   ],
   "edges": [
-    { "id": "e1", "source": "exploration-planning", "target": "extraction-ops", "animated": true },
-    { "id": "e2", "source": "exploration-planning", "target": "geospatial-data" },
-    { "id": "e3", "source": "extraction-ops", "target": "logistics-shipping-mining", "animated": true },
-    { "id": "e4", "source": "extraction-ops", "target": "safety-compliance-mining" },
-    { "id": "e5", "source": "logistics-shipping-mining", "target": "tonnage-tracking" }
+    {
+      "id": "e1",
+      "source": "exploration-planning",
+      "target": "extraction-ops",
+      "animated": true
+    },
+    {
+      "id": "e2",
+      "source": "exploration-planning",
+      "target": "geospatial-data"
+    },
+    {
+      "id": "e3",
+      "source": "extraction-ops",
+      "target": "logistics-shipping-mining",
+      "animated": true
+    },
+    {
+      "id": "e4",
+      "source": "extraction-ops",
+      "target": "safety-compliance-mining"
+    },
+    {
+      "id": "e5",
+      "source": "logistics-shipping-mining",
+      "target": "tonnage-tracking"
+    }
   ]
 }

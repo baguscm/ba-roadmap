@@ -1,0 +1,46 @@
+---
+title: Invoicing & Billing
+domain: o2c-basic
+---
+
+# Invoicing & Billing
+
+**Billing** is the transition point from supply chain activities to financial recognition. It is the process of generating a legal commercial invoice to the customer for the goods delivered or services rendered in the **O2C** cycle.
+
+## Node Knowledge: The Revenue Trigger
+1. **Billing Due List:** Monitoring orders and deliveries that are ready for invoicing.
+2. **Invoice Generation:** Aggregating delivery data, pricing, and tax into a legal document.
+3. **Accounting Integration:** Posting the invoice to the General Ledger (GL) as Revenue and Accounts Receivable (AR).
+4. **Document Output:** Distributing the invoice via Email, Portal, or EDI/XML.
+
+<DeliverableChecklist
+  id="billing-basics"
+  items="Commercial Invoice Template (Legal Compliant) | Credit Note / RMA Refund Process Map | Revenue Recognition (RevRec) Ruleset | Tax Code Mapping Matrix (Standard vs. Exempt) | Automated Invoice Distribution Logic"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Ensuring that the amounts calculated on the invoice match the Sales Order and the physical Shipment (The "3-Way Match" in reverse).
+*   **External Design:** Designing the layouts of the invoices to meet various regional legal requirements (e.g., VAT in Europe vs. Sales Tax in US).
+
+## Typical Deliverables
+
+*   **Revenue Mapping Document:** Showing which GL accounts are hit when a specific product category is billed.
+*   **Functional Specification:** For the automated billing batch jobs.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't assume all billing is "Ship-then-Bill". Modern businesses use "Subscription Billing", "Milestone Billing", and "Pro-forma Billing". As a BA, you must clarify the *trigger* for the invoice. If you bill too early, the customer rejects it; if you bill too late, you hurt the company's cash flow.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Finance (FI):** Robust accounting integration with automated revenue recognition.
+*   **Zuora:** An industry leader for complex subscription and recurring billing models.

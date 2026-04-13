@@ -1,0 +1,46 @@
+---
+title: Depreciation Setup
+domain: p2p-assets
+---
+
+# Asset Depreciation Setup
+
+In **Advanced P2P with Assets**, **Depreciation** is the systematic allocation of an asset's cost over its "Useful Life." It is a non-cash expense that is critical for accurate financial reporting and tax calculations.
+
+## Node Knowledge: The Value Erosion
+1. **Useful Life:** The expected duration (e.g., 5 years for IT, 20 years for buildings) the asset will provide value.
+2. **Depreciation Methods:** Straight-line (equal amounts), Declining Balance (accelerated), or Units-of-Production.
+3. **Salvage Value:** The estimated residual value of the asset at the end of its useful life.
+4. **Depreciation Keys:** The configuration in the ERP that automates the monthly posting to the General Ledger.
+
+<DeliverableChecklist
+  id="depreciation-setup-advanced"
+  items="Depreciation Method Matrix by Asset Class | Useful Life (Years/Months) Schedule | Salvage Value Calculation Logic | Mid-month/Full-month Convention Policy | Monthly Depreciation Posting Batch Spec"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing the impact of different depreciation methods on the company's EBITDA.
+*   **Requirements Validation:** Ensuring the system can handle "Tax Depreciation" (for the government) and "Book Depreciation" (for the shareholders) simultaneously.
+
+## Typical Deliverables
+
+*   **Depreciation Key Specification:** The exact configuration parameters for the ERP's automated engine.
+*   **Asset Life-cycle Flow:** Showing the path from Initialization -> Depreciation -> Disposal/Scrapping.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "Retirement Bias". Many companies forget to "Scrap" assets in the system when they are physically thrown away. This leads to an overinflated balance sheet and paying insurance on ghosts. As a BA, you should implement a "Physical Audit" requirement at least once a year to sync the ERP with reality.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Finance (Asset Accounting):** Supports complex, multi-ledger depreciation (IFRS, US GAAP, local tax) in a single transaction.
+*   **Oracle ERP Cloud (Fixed Assets):** Provides robust functionality for tracking asset life-cycles and automated depreciation reporting.

@@ -1,0 +1,46 @@
+---
+title: Requisition to PO
+domain: p2p-basic
+---
+
+# Requisition to PO
+
+The **Procure to Pay (P2P)** process begins with the identification of a need. **Requisition to PO** covers the journey from an internal employee's request to the issuance of a legally binding Purchase Order (PO) to a vendor.
+
+## Node Knowledge: The Commitment Trigger
+1. **Purchase Requisition (PR):** An internal document used by an employee to request goods or services.
+2. **Approval Workflow:** Routing the PR through budget holders and management based on cost centers.
+3. **Sourcing/Catalog Selection:** Choosing the correct item from a pre-negotiated contract or catalog.
+4. **Purchase Order (PO):** The financial and legal commitment sent to the vendor.
+
+<DeliverableChecklist
+  id="requisition-po-basics"
+  items="Approval Threshold Matrix (By Value/Department) | Purchase Order (PO) Output Template | Standard Commodity Code List | Internal Requisition Form Specification | Procurement Authorization Policy"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Ensuring that the requested purchase is within the assigned budget for the department.
+*   **Requirements Validation:** Ensuring the "Description of Goods" on the PO is specific enough to be used later for Quality Inspection and Invoicing.
+
+## Typical Deliverables
+
+*   **Approval Matrix:** A logic table showing who needs to sign off on a purchase based on its value.
+*   **Functional Specification:** For the integration between the Procurement system and the Finance Ledger.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Minimize "Maverick Spending"—the practice of employees buying outside of approved catalogs. As a BA, your goal is to make the internal requisition process as easy as an e-commerce shopping experience. If it's too hard to use, employees will buy via credit card, causing the company to lose negotiating power and budget control.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP Ariba Buying:** A cloud-based platform that offers a consumer-like shopping experience for corporate purchasing.
+*   **Microsoft Dynamics 365 Supply Chain:** Provides robust requisition management integrated with production and warehouse planning.

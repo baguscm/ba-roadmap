@@ -1,0 +1,46 @@
+---
+title: EDI & B2B Integration
+domain: o2c-b2b
+---
+
+# EDI & B2B Integration
+
+In **Advanced B2B O2C**, **Electronic Data Interchange (EDI)** is the backbone of operational efficiency. It allows for the machine-to-machine exchange of business documents (Orders, Invoices, ASNs) between the company and its high-volume trading partners.
+
+## Node Knowledge: The Automation Backbone
+1. **Standard Protocols:** Using industry standards like EDIFACT, ANSI X12, or XML.
+2. **Transaction Sets:** 850 (Purchase Order), 855 (PO Acknowledgment), 856 (Advance Ship Notice), 810 (Invoice).
+3. **Data Mapping:** The process of translating the partner's data format into the company's ERP field structure.
+4. **AS2 & VAN:** The communication methods used to securely transmit the data.
+
+<DeliverableChecklist
+  id="edi-integration-advanced"
+  items="EDI Trading Partner Onboarding Spec | Data Mapping Matrix (Partner to ERP) | ASN (Advance Ship Notice) Trigger Logic | EDI Error Handling & Notification Workflow | AS2 Connectivity Test Plan"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Interface Analysis:** Defining the specific data fields that must be mapped between the two systems.
+*   **Requirements Validation:** Ensuring that the ERP has enough data to fulfill an order received via EDI without manual touchpoints.
+
+## Typical Deliverables
+
+*   **Mapping Specification:** A field-by-field guide for developers to translate EDI segments into ERP tables.
+*   **Error Exception Flowchart:** Detailing what happens when an EDI message fails validation.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't over-customize EDI for a single partner. If every customer has a different mapping, you create a maintenance nightmare. As a BA, your goal is to push for a "Global EDI Standard" internally and use middleware (like Boomi or MuleSoft) to handle the translation, keeping your core ERP clean.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **OpenText Business Network:** One of the world's largest EDI VAN and B2B integration platforms.
+*   **MuleSoft Anypoint Platform:** A modern integration platform used to orchestrate EDI and API-based B2B flows.

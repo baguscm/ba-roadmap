@@ -1,0 +1,55 @@
+{
+  "id": "o2c-b2b",
+  "name": "O2C - B2B Advanced",
+  "nodes": [
+    {
+      "id": "customer-master",
+      "data": { "label": "Customer Master", "level": "basic" },
+      "position": { "x": 100, "y": 0 }
+    },
+    {
+      "id": "credit-management",
+      "data": { "label": "Credit Management", "level": "advanced" },
+      "position": { "x": 400, "y": 0 }
+    },
+    {
+      "id": "order-entry",
+      "data": { "label": "Order Entry", "level": "basic" },
+      "position": { "x": 100, "y": 150 }
+    },
+    {
+      "id": "edi-integration",
+      "data": { "label": "EDI Integration", "level": "advanced" },
+      "position": { "x": 400, "y": 150 }
+    },
+    {
+      "id": "order-fulfillment",
+      "data": { "label": "Order Fulfillment", "level": "basic" },
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "billing",
+      "data": { "label": "Invoicing & Billing", "level": "basic" },
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "tax-compliance",
+      "data": { "label": "Tax Compliance", "level": "advanced" },
+      "position": { "x": 400, "y": 450 }
+    },
+    {
+      "id": "ar-collection",
+      "data": { "label": "A/R & Collections", "level": "basic" },
+      "position": { "x": 100, "y": 600 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "customer-master", "target": "order-entry", "animated": true },
+    { "id": "e2", "source": "order-entry", "target": "order-fulfillment", "animated": true },
+    { "id": "e3", "source": "order-fulfillment", "target": "billing", "animated": true },
+    { "id": "e4", "source": "billing", "target": "ar-collection", "animated": true },
+    { "id": "e5", "source": "customer-master", "target": "credit-management" },
+    { "id": "e6", "source": "order-entry", "target": "edi-integration" },
+    { "id": "e7", "source": "billing", "target": "tax-compliance" }
+  ]
+}

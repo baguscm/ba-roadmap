@@ -1,0 +1,47 @@
+---
+title: Production Scheduling
+domain: plan-to-produce
+---
+
+# Production Scheduling & Capacity
+
+While MRP identifies *what* to make, **Production Scheduling** determines *when* and *on which machine* it should be made. It is the process of sequencing manufacturing orders to optimize machine utilization and labor while meeting delivery deadlines.
+
+## Node Knowledge: The Timing Optimization
+1. **Work Centers:** Defining the physical machines, production lines, or teams.
+2. **Capacities:** Calculating how many "Standard Hours" a work center can produce per day.
+3. **Sequencing:** Determining the order of jobs to minimize "Changeover Time" (e.g., grouping products of the same color or size).
+4. **Finite vs. Infinite Scheduling:** Scheduling based on realistic resource limits vs. assuming unlimited capacity.
+5. **Leveling:** Smoothing out production "peaks" and "valleys" to ensure a consistent workload.
+
+<DeliverableChecklist
+  id="production-scheduling-basics"
+  items="Production Capacity Matrix (By Work Center) | Changeover Matrix (Setup optimization) | Global Production Calendar (Holidays/Shifts) | Finite Scheduling Parameters | Labor Requirement Forecast"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Requirements Modeling:** Defining the "Standard Times" for each operation—how long does it *really* take to make one unit?
+*   **Business Rules Analysis:** Defining the priority logic—for example, does a "Rush Order" automatically bump a standard order in the schedule?
+
+## Typical Deliverables
+
+*   **Gantt Chart View Spec:** Designing how planners visualize the schedule and move jobs between machines.
+*   **Setup Time Matrix:** Detailing the time required to switch from Product A to Product B.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't over-schedule. A machine scheduled at 100% capacity is a disaster waiting to happen. The slightest delay (a broken tool, a sick employee) will cause a domino effect through your entire supply chain. As a BA, recommend a "Buffer Capacity" of 10-15% to allow for the inevitable variability of the shop floor.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Production Planning and Detailed Scheduling - PP/DS):** Features advanced algorithms for finite capacity scheduling.
+*   **JobBOSS²:** A popular, specialized solution for job shops and custom manufacturers to manage complex scheduling.

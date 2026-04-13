@@ -1,0 +1,46 @@
+---
+title: A/R & Collections
+domain: o2c-basic
+---
+
+# Accounts Receivable (A/R) & Collections
+
+**Accounts Receivable (A/R)** represents the final stage of the **Order to Cash** lifecycle. It involves managing the funds owed by customers, reconciling payments, and proactively recovering overdue debt to maintain corporate liquidity.
+
+## Node Knowledge: The Liquidity Management
+1. **Payment Receipt:** Capturing funds via ACH, Check, Wire, or Credit Card.
+2. **Cash Application:** Matching the payment to the open invoice in the ERP.
+3. **Dunning:** The automated process of sending reminders for overdue invoices.
+4. **Dispute Management:** Handling customer claims regarding short-payments or pricing errors.
+
+<DeliverableChecklist
+  id="ar-collections-basics"
+  items="Aging Report Specification (30/60/90 days) | Dunning Letter Templates (Level 1 to Legal) | Cash Application Tolerance Rules | Write-off Authorization Workflow | Dispute Reason Code Matrix"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Using historical data to predict which customers are likely to default.
+*   **Requirements Analysis:** Defining the logic for "Automatic Clearing"—how the system should behave when a payment doesn't perfectly match any invoice.
+
+## Typical Deliverables
+
+*   **Dunning Flowchart:** Detailing the timing and severity of collection communications.
+*   **A/R Dashboard Mockup:** Visualizing DSO (Days Sales Outstanding) and total exposure.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Focus on "Cash Application" efficiency. If your finance team is manually matching every dollar, they are wasting thousands of hours. Your goal as a BA is to achieve 90%+ "Auto-Match" by ensuring standard bank file formats (like BAI2 or CAMT.053) are correctly mapped to your ERP.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Receivable Management (FSCM):** The gold standard for integrated credit, collections, and disputes.
+*   **HighRadius:** A leading AI-driven platform specifically designed to automate the O2C "back-end" of collections and cash application.

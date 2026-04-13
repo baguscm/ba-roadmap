@@ -1,0 +1,46 @@
+---
+title: Letter of Credit (L/C)
+domain: p2p-import
+---
+
+# Letter of Credit & Trade Finance
+
+In **Advanced P2P with Import**, the **Letter of Credit (L/C)** is a critical financial anchor. It acts as a guarantee from the buyer's bank to the seller's bank that payment will be made provided that certain conditions (shipment proof, document quality) are met.
+
+## Node Knowledge: The Financial Guarantee
+1. **L/C Issuance:** The buyer's bank carves out credit to guarantee the purchase.
+2. **Documentary Collection:** The seller must provide "Clean" documents (Bill of Lading, Invoice, Packing List) to the bank to trigger payment.
+3. **Discrepancy Handling:** Managing cases where the documents provided do not perfectly match the L/C terms.
+4. **Negotiation & Settlement:** The final transfer of funds once compliance is verified by both banking institutions.
+
+<DeliverableChecklist
+  id="letter-of-credit-advanced"
+  items="L/C Application Framework | Document Discrepancy Resolution Workflow | Bank Interface Connectivity Spec (e.g., SWIFT) | Trade Finance Liability Report | L/C Expiry & Amendment Process Map"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing the cost of financing vs. the risk of cross-border payment default.
+*   **Requirements Modeling:** ensuring that the ERP can handle "Payment on Document Receipt" logic, which differs from standard net-30 terms.
+
+## Typical Deliverables
+
+*   **L/C Request Form:** The internal document used to initiate a credit guarantee with the Treasury department.
+*   **Document Checklist:** A rigid list of shipping data points that must be verified before payment is authorized.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Letters of Credit are pedantic. A single typo in a "Bill of Lading" can cause a bank to reject a $1M payment. As a BA, you must automate the "Document Drafting" process using ERP data to ensure that what we *asked* for in the L/C matches exactly what the vendor *puts* on their shipping documents.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Treasury and Risk Management (TRM):** Features specialized modules for managing Bank Guarantees and Letters of Credit.
+*   **Misys (Finastra) FusionTrade:** A popular platform for banks and large corporations to manage high-volume global trade finance.

@@ -1,0 +1,37 @@
+{
+  "id": "hr-recruit",
+  "name": "Recruit to Onboard",
+  "nodes": [
+    {
+      "id": "job-requisition",
+      "data": { "label": "Job Requisition", "level": "basic" },
+      "position": { "x": 100, "y": 0 }
+    },
+    {
+      "id": "sourcing",
+      "data": { "label": "Talent Sourcing", "level": "basic" },
+      "position": { "x": 100, "y": 150 }
+    },
+    {
+      "id": "interview",
+      "data": { "label": "Interview & Selection", "level": "basic" },
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "offer",
+      "data": { "label": "Offer Management", "level": "basic" },
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "onboarding",
+      "data": { "label": "Employee Onboarding", "level": "basic" },
+      "position": { "x": 100, "y": 600 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "job-requisition", "target": "sourcing", "animated": true },
+    { "id": "e2", "source": "sourcing", "target": "interview", "animated": true },
+    { "id": "e3", "source": "interview", "target": "offer", "animated": true },
+    { "id": "e4", "source": "offer", "target": "onboarding", "animated": true }
+  ]
+}

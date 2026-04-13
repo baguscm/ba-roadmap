@@ -1,0 +1,46 @@
+---
+title: Invoice Verification
+domain: p2p-basic
+---
+
+# Invoice Verification (The 3-Way Match)
+
+**Invoice Verification** is the critical control point in the **Procure to Pay (P2P)** process. It ensures that the company only pays for what it ordered and what it actually received, preventing fraud, overbilling, and accounting errors.
+
+## Node Knowledge: The Financial Control
+1. **The 3-Way Match:** Automatically comparing the **Purchase Order** (what we asked for), the **Goods Receipt** (what we got), and the **Vendor Invoice** (what they billed).
+2. **Tolerance Limits:** Determining how much of a price or quantity variance is allowed before the invoice is flagged for review.
+3. **Price Variance:** Handling discrepancies where the billed price differs from the PO price.
+4. **Quantity Variance:** Handling cases where the billed quantity exceeds the received quantity.
+
+<DeliverableChecklist
+  id="invoice-verification-basics"
+  items="3-Way Match Rule Configuration | Price Variance Tolerance Matrix | Blocked Invoice Exception Workflow | Credit Memo / Short-payment Procedure | Automated Clearing Logic"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing the impact of recurring price variances on the overall cost of goods sold (COGS).
+*   **Business Rules Analysis:** Defining the exact logic for handling "Service" invoices where there is no physical goods receipt (2-Way Match).
+
+## Typical Deliverables
+
+*   **Exception Handling Flowchart:** Visualizing what happens when an invoice is "Blocked for Payment."
+*   **Tolerance Table:** specifying the dollar or percentage thresholds for automated approval.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't manually reconcile "Small Dollar" variances. For example, if a vendor bills $0.50 more on a $5,000 order, the cost of a human reviewing that hold is much higher than the $0.50 loss. As a BA, you should implement "Automatic Write-offs" for variances under a certain threshold to keep the high-volume process moving.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Logistics Invoice Verification - LIV):** Features deep, granular 3-way match logic with automated blocking/unblocking.
+*   **OpenText Vendor Invoice Management (VIM):** A specialized solution that uses OCR and AI to automate the capture and verification of vendor invoices.

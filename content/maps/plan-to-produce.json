@@ -1,0 +1,37 @@
+{
+  "id": "plan-to-produce",
+  "name": "Plan to Produce",
+  "nodes": [
+    {
+      "id": "demand-planning",
+      "data": { "label": "Demand Planning", "level": "basic" },
+      "position": { "x": 100, "y": 0 }
+    },
+    {
+      "id": "mrp",
+      "data": { "label": "Material Requirements (MRP)", "level": "basic" },
+      "position": { "x": 100, "y": 150 }
+    },
+    {
+      "id": "production-scheduling",
+      "data": { "label": "Production Scheduling", "level": "basic" },
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "manufacturing-exec",
+      "data": { "label": "Mfg Execution", "level": "basic" },
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "inventory-update",
+      "data": { "label": "Inventory & Sync", "level": "basic" },
+      "position": { "x": 100, "y": 600 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "demand-planning", "target": "mrp", "animated": true },
+    { "id": "e2", "source": "mrp", "target": "production-scheduling", "animated": true },
+    { "id": "e3", "source": "production-scheduling", "target": "manufacturing-exec", "animated": true },
+    { "id": "e4", "source": "manufacturing-exec", "target": "inventory-update", "animated": true }
+  ]
+}

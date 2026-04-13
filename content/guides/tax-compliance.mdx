@@ -1,0 +1,46 @@
+---
+title: Global Tax Compliance
+domain: o2c-b2b
+---
+
+# Global Tax Compliance
+
+In **Advanced O2C**, **Tax Compliance** is a critical regulatory automated layer. It ensures that every invoice correctly calculates and reports transaction taxes (VAT, GST, Sales Tax) based on the legal nexus of the buyer, the seller, and the origin of the goods.
+
+## Node Knowledge: The Regulatory Engine
+1. **Tax Jurisdictions:** Determining which state, province, or country has the right to tax a transaction.
+2. **Exemption Certificate Management:** Tracking certificates that allow certain B2B customers to buy tax-free.
+3. **Threshold Monitoring:** Tracking sales volume to determine when the company has "Nexus" in a new jurisdiction.
+4. **Filing & Remittance:** The automated reporting of collected tax to government authorities.
+
+<DeliverableChecklist
+  id="tax-compliance-advanced"
+  items="Tax Matrix (Nexus & Rates by Region) | Exemption Certificate Workflow | Automated Tax Calculation Engine Integration | Multi-Currency Tax Reporting Suite | Conflict Resolution Logic (Calculated vs. Billed Tax)"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Assessing the financial risk of non-compliance if tax rates are incorrectly configured.
+*   **Business Rules Analysis:** Defining the logic for "Taxable Events"—is tax calculated at the time of order, at shipping, or at payment receipt?
+
+## Typical Deliverables
+
+*   **Tax Determination Matrix:** A logic table showing how tax codes are derived based on Ship-From and Ship-To addresses.
+*   **Interface Spec:** For the integration between the ERP and an external tax engine (e.g., Avalara).
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Do not try to maintain tax rates manually in your ERP. Tax laws change daily. As a BA, your recommendation should always be to use a specialized "Tax Engine" (Tax as a Service) that automatically injects the correct, legally-compliant rate into your checkout or billing process via API.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Avalara AvaTax:** The industry leader in automated, cloud-based tax compliance for e-commerce and B2B.
+*   **Vertex:** A robust enterprise-grade tax technology solution favored by large multinational SAP and Oracle users.

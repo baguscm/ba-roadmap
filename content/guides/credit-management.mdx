@@ -1,0 +1,46 @@
+---
+title: Credit Management & Risk
+domain: o2c-b2b
+---
+
+# Credit Management & Risk
+
+In **Advanced B2B O2C**, **Credit Management** is a proactive financial filter. It ensures that the company limits its exposure to bad debt by assessing customer creditworthiness before orders are released to the warehouse.
+
+## Node Knowledge: The Financial Guardrail
+1. **Credit Limit:** The maximum value of open orders and invoices a customer can have.
+2. **Risk Profiling:** Grouping customers by credit risk (Low, Mid, High) based on payment history and external ratings (e.g., D&B).
+3. **Credit Block:** Automatically stopping an order if it exceeds the limit or if the customer has significantly overdue invoices.
+4. **Credit Release Workflow:** The process where a Credit Manager reviews and manually approves a blocked order.
+
+<DeliverableChecklist
+  id="credit-management-advanced"
+  items="Credit Risk Rating Framework | Credit Limit Calculation Logic | Credit Approval Authority Matrix | Blocked Order Notification Workflow | AR Portfolio Risk Assessment Report"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Defining the mathematical logic that determines a customer's credit limit.
+*   **Business Rules Analysis:** Configuring the "Automatic Credit Check" triggers—determining *when* the system should check credit (e.g., at order entry vs. at delivery).
+
+## Typical Deliverables
+
+*   **Credit Review Workflow:** A flowchart showing the path of a blocked order.
+*   **External Data Integration Spec:** Detailing how the ERP pulls credit scores from external agencies.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Don't make your credit rules too rigid. If you block an order for a loyal customer because they are $5 over their limit, you risk losing the relationship. Your BA logic should include "Credit Tolerances" and "Seasonal Overrides" to allow for business flexibility while still maintaining financial control.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Credit Management (FSCM):** A centralized, real-time credit engine that manages limits across global sales channels.
+*   **BlackLine:** Specialized software that automates the credit application and limit review process using AI.

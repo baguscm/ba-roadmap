@@ -4,154 +4,448 @@
   "nodes": [
     {
       "id": "procure-to-pay",
-      "data": { "label": "Procure to Pay" },
-      "position": { "x": 100, "y": 52 }
+      "data": {
+        "label": "Procure to Pay",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 52
+      }
     },
     {
       "id": "vendor-management",
-      "data": { "label": "Vendor Management", "type": "sub" },
-      "position": { "x": 450, "y": 0 }
+      "data": {
+        "label": "Vendor Management",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 0
+      }
     },
     {
       "id": "purchase-orders",
-      "data": { "label": "Purchase Orders", "type": "sub" },
-      "position": { "x": 450, "y": 70 }
+      "data": {
+        "label": "Purchase Orders",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 70
+      }
     },
     {
       "id": "warehouse-receiving",
-      "data": { "label": "Warehouse Receiving", "type": "sub" },
-      "position": { "x": 450, "y": 140 }
+      "data": {
+        "label": "Warehouse Receiving",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 140
+      }
     },
     {
       "id": "invoicing-operations",
-      "data": { "label": "Invoicing Operations", "type": "sub" },
-      "position": { "x": 450, "y": 210 }
+      "data": {
+        "label": "Invoicing Operations",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 210
+      }
     },
     {
       "id": "order-to-cash",
-      "data": { "label": "Order to Cash" },
-      "position": { "x": 100, "y": 410 }
+      "data": {
+        "label": "Order to Cash",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 410
+      }
     },
     {
       "id": "customer-order-management",
-      "data": { "label": "Customer Order Mgt", "type": "sub" },
-      "position": { "x": 450, "y": 340 }
+      "data": {
+        "label": "Customer Order Mgt",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 340
+      }
     },
     {
       "id": "order-fulfillment",
-      "data": { "label": "Order Fulfillment", "type": "sub" },
-      "position": { "x": 450, "y": 410 }
+      "data": {
+        "label": "Order Fulfillment",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 410
+      }
     },
     {
       "id": "payment-collection",
-      "data": { "label": "Payment Collection", "type": "sub" },
-      "position": { "x": 450, "y": 480 }
+      "data": {
+        "label": "Payment Collection",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 480
+      }
     },
     {
       "id": "inventory-logistics",
-      "data": { "label": "Inventory & Reverse Logistics" },
-      "position": { "x": 100, "y": 680 }
+      "data": {
+        "label": "Inventory & Reverse Logistics",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 680
+      }
     },
     {
       "id": "warehouse-operations",
-      "data": { "label": "Warehouse Operations", "type": "sub" },
-      "position": { "x": 450, "y": 610 }
+      "data": {
+        "label": "Warehouse Operations",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 610
+      }
     },
     {
       "id": "inventory-allocation",
-      "data": { "label": "Inventory Allocation", "type": "sub" },
-      "position": { "x": 450, "y": 680 }
+      "data": {
+        "label": "Inventory Allocation",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 680
+      }
     },
     {
       "id": "returns-management",
-      "data": { "label": "Returns Management", "type": "sub" },
-      "position": { "x": 450, "y": 750 }
+      "data": {
+        "label": "Returns Management",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 750
+      }
     },
     {
       "id": "catalog-cx",
-      "data": { "label": "Catalog & Customer Experience" },
-      "position": { "x": 100, "y": 915 }
+      "data": {
+        "label": "Catalog & Customer Experience",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 915
+      }
     },
     {
       "id": "pim",
-      "data": { "label": "Product Information Mgt (PIM)", "type": "sub" },
-      "position": { "x": 450, "y": 880 }
+      "data": {
+        "label": "Product Information Mgt (PIM)",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 880
+      }
     },
     {
       "id": "pricing-promotions",
-      "data": { "label": "Pricing & Promotions", "type": "sub" },
-      "position": { "x": 450, "y": 950 }
+      "data": {
+        "label": "Pricing & Promotions",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 950
+      }
     },
     {
       "id": "finance",
-      "data": { "label": "Finance" },
-      "position": { "x": 100, "y": 1115 }
+      "data": {
+        "label": "Finance",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 1115
+      }
     },
     {
       "id": "financial-reporting",
-      "data": { "label": "Financial Reporting", "type": "sub" },
-      "position": { "x": 450, "y": 1080 }
+      "data": {
+        "label": "Financial Reporting",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1080
+      }
     },
     {
       "id": "account-reconciliation",
-      "data": { "label": "Account Reconciliation", "type": "sub" },
-      "position": { "x": 450, "y": 1150 }
+      "data": {
+        "label": "Account Reconciliation",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1150
+      }
     },
     {
       "id": "analytics",
-      "data": { "label": "Analytics" },
-      "position": { "x": 100, "y": 1315 }
+      "data": {
+        "label": "Analytics",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 1315
+      }
     },
     {
       "id": "bi-data-warehousing",
-      "data": { "label": "BI & Data Warehousing", "type": "sub" },
-      "position": { "x": 450, "y": 1280 }
+      "data": {
+        "label": "BI & Data Warehousing",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1280
+      }
     },
     {
       "id": "kpi-dashboards",
-      "data": { "label": "KPIs & Dashboards", "type": "sub" },
-      "position": { "x": 450, "y": 1350 }
+      "data": {
+        "label": "KPIs & Dashboards",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1350
+      }
     },
     {
       "id": "crm-customer-service",
-      "data": { "label": "CRM & Customer Service" },
-      "position": { "x": 100, "y": 1515 }
+      "data": {
+        "label": "CRM & Customer Service",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 1515
+      }
     },
     {
       "id": "customer-helpdesk",
-      "data": { "label": "Customer Helpdesk", "type": "sub" },
-      "position": { "x": 450, "y": 1480 }
+      "data": {
+        "label": "Customer Helpdesk",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1480
+      }
     },
     {
       "id": "loyalty-programs",
-      "data": { "label": "Loyalty Programs", "type": "sub" },
-      "position": { "x": 450, "y": 1550 }
+      "data": {
+        "label": "Loyalty Programs",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 1550
+      }
     }
   ],
   "edges": [
-    { "id": "e-procure-to-pay-order-to-cash", "source": "procure-to-pay", "target": "order-to-cash", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-procure-to-pay-vendor-management", "source": "procure-to-pay", "target": "vendor-management", "sourceHandle": "right" },
-    { "id": "e-procure-to-pay-purchase-orders", "source": "procure-to-pay", "target": "purchase-orders", "sourceHandle": "right" },
-    { "id": "e-procure-to-pay-warehouse-receiving", "source": "procure-to-pay", "target": "warehouse-receiving", "sourceHandle": "right" },
-    { "id": "e-procure-to-pay-invoicing-operations", "source": "procure-to-pay", "target": "invoicing-operations", "sourceHandle": "right" },
-    { "id": "e-order-to-cash-inventory-logistics", "source": "order-to-cash", "target": "inventory-logistics", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-order-to-cash-customer-order-management", "source": "order-to-cash", "target": "customer-order-management", "sourceHandle": "right" },
-    { "id": "e-order-to-cash-order-fulfillment", "source": "order-to-cash", "target": "order-fulfillment", "sourceHandle": "right" },
-    { "id": "e-order-to-cash-payment-collection", "source": "order-to-cash", "target": "payment-collection", "sourceHandle": "right" },
-    { "id": "e-inventory-logistics-catalog-cx", "source": "inventory-logistics", "target": "catalog-cx", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-inventory-logistics-warehouse-operations", "source": "inventory-logistics", "target": "warehouse-operations", "sourceHandle": "right" },
-    { "id": "e-inventory-logistics-inventory-allocation", "source": "inventory-logistics", "target": "inventory-allocation", "sourceHandle": "right" },
-    { "id": "e-inventory-logistics-returns-management", "source": "inventory-logistics", "target": "returns-management", "sourceHandle": "right" },
-    { "id": "e-catalog-cx-finance", "source": "catalog-cx", "target": "finance", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-catalog-cx-pim", "source": "catalog-cx", "target": "pim", "sourceHandle": "right" },
-    { "id": "e-catalog-cx-pricing-promotions", "source": "catalog-cx", "target": "pricing-promotions", "sourceHandle": "right" },
-    { "id": "e-finance-analytics", "source": "finance", "target": "analytics", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-finance-financial-reporting", "source": "finance", "target": "financial-reporting", "sourceHandle": "right" },
-    { "id": "e-finance-account-reconciliation", "source": "finance", "target": "account-reconciliation", "sourceHandle": "right" },
-    { "id": "e-analytics-crm-customer-service", "source": "analytics", "target": "crm-customer-service", "sourceHandle": "bottom", "animated": true },
-    { "id": "e-analytics-bi-data-warehousing", "source": "analytics", "target": "bi-data-warehousing", "sourceHandle": "right" },
-    { "id": "e-analytics-kpi-dashboards", "source": "analytics", "target": "kpi-dashboards", "sourceHandle": "right" },
-    { "id": "e-crm-customer-service-customer-helpdesk", "source": "crm-customer-service", "target": "customer-helpdesk", "sourceHandle": "right" },
-    { "id": "e-crm-customer-service-loyalty-programs", "source": "crm-customer-service", "target": "loyalty-programs", "sourceHandle": "right" }
+    {
+      "id": "e-procure-to-pay-order-to-cash",
+      "source": "procure-to-pay",
+      "target": "order-to-cash",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-procure-to-pay-vendor-management",
+      "source": "procure-to-pay",
+      "target": "vendor-management",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-procure-to-pay-purchase-orders",
+      "source": "procure-to-pay",
+      "target": "purchase-orders",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-procure-to-pay-warehouse-receiving",
+      "source": "procure-to-pay",
+      "target": "warehouse-receiving",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-procure-to-pay-invoicing-operations",
+      "source": "procure-to-pay",
+      "target": "invoicing-operations",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-order-to-cash-inventory-logistics",
+      "source": "order-to-cash",
+      "target": "inventory-logistics",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-order-to-cash-customer-order-management",
+      "source": "order-to-cash",
+      "target": "customer-order-management",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-order-to-cash-order-fulfillment",
+      "source": "order-to-cash",
+      "target": "order-fulfillment",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-order-to-cash-payment-collection",
+      "source": "order-to-cash",
+      "target": "payment-collection",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-inventory-logistics-catalog-cx",
+      "source": "inventory-logistics",
+      "target": "catalog-cx",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-inventory-logistics-warehouse-operations",
+      "source": "inventory-logistics",
+      "target": "warehouse-operations",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-inventory-logistics-inventory-allocation",
+      "source": "inventory-logistics",
+      "target": "inventory-allocation",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-inventory-logistics-returns-management",
+      "source": "inventory-logistics",
+      "target": "returns-management",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-catalog-cx-finance",
+      "source": "catalog-cx",
+      "target": "finance",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-catalog-cx-pim",
+      "source": "catalog-cx",
+      "target": "pim",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-catalog-cx-pricing-promotions",
+      "source": "catalog-cx",
+      "target": "pricing-promotions",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-finance-analytics",
+      "source": "finance",
+      "target": "analytics",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-finance-financial-reporting",
+      "source": "finance",
+      "target": "financial-reporting",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-finance-account-reconciliation",
+      "source": "finance",
+      "target": "account-reconciliation",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-analytics-crm-customer-service",
+      "source": "analytics",
+      "target": "crm-customer-service",
+      "sourceHandle": "bottom",
+      "animated": true
+    },
+    {
+      "id": "e-analytics-bi-data-warehousing",
+      "source": "analytics",
+      "target": "bi-data-warehousing",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-analytics-kpi-dashboards",
+      "source": "analytics",
+      "target": "kpi-dashboards",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-crm-customer-service-customer-helpdesk",
+      "source": "crm-customer-service",
+      "target": "customer-helpdesk",
+      "sourceHandle": "right"
+    },
+    {
+      "id": "e-crm-customer-service-loyalty-programs",
+      "source": "crm-customer-service",
+      "target": "loyalty-programs",
+      "sourceHandle": "right"
+    }
   ]
 }

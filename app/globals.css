@@ -13,6 +13,11 @@
   --subnode-border: #d1d5db;
   --subnode-text: #4b5563;
   
+  --level-basic-bg: #ecfdf5;
+  --level-basic-border: #059669;
+  --level-advanced-bg: #eef2ff;
+  --level-advanced-border: #4f46e5;
+  
   /* Typography fallback */
   --tw-prose-body: var(--foreground);
   --tw-prose-headings: var(--foreground);
@@ -43,6 +48,10 @@
   --color-subnode-bg: var(--subnode-bg);
   --color-subnode-border: var(--subnode-border);
   --color-subnode-text: var(--subnode-text);
+  --color-level-basic-bg: var(--level-basic-bg);
+  --color-level-basic-border: var(--level-basic-border);
+  --color-level-advanced-bg: var(--level-advanced-bg);
+  --color-level-advanced-border: var(--level-advanced-border);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -58,6 +67,11 @@
   --subnode-bg: #242628;
   --subnode-border: #3f4144;
   --subnode-text: #cbd5e1;
+
+  --level-basic-bg: #064e3b;
+  --level-basic-border: #10b981;
+  --level-advanced-bg: #1e1b4b;
+  --level-advanced-border: #818cf8;
 
   /* Typography Dark Mode */
   --tw-prose-body: var(--foreground);

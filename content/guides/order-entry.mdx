@@ -1,0 +1,46 @@
+---
+title: Sales Order Entry
+domain: o2c-basic
+---
+
+# Sales Order Entry
+
+**Order Entry** is the point of conversion where a customer's request becomes a legally binding commitment to deliver goods or services. In the **APQC** framework, this is part of the "Manage Customer Orders" process group.
+
+## Node Knowledge: The Fulfillment Trigger
+1. **Quotation to Order:** Converting a negotiated price into a confirmed demand.
+2. **Availability Check (ATP):** Verifying "Available to Promise" inventory before committing a delivery date.
+3. **Price Determination:** Applying discounts, taxes, and shipping surcharges.
+4. **Order Header & Line Items:** Structure of the order data (Customer info vs. Product info).
+
+<DeliverableChecklist
+  id="order-entry-basics"
+  items="Sales Order Mapping (CRM to ERP) | Pricing Procedure Logic (Discounts/Taxes) | ATP (Available-to-Promise) Rule Set | Backorder Management Workflow | Automated Order Acknowledgment Template"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Ensuring the order margins meet company profitability targets before approval.
+*   **Requirements Validation:** Ensuring "Special Instructions" (e.g., liftgate delivery) are captured as actionable data for the warehouse.
+
+## Typical Deliverables
+
+*   **Process Flow Diagram:** Showing the "Happy Path" from order receipt to warehouse release.
+*   **Business Rules Document:** Detailing how the system handles price conflicts or minimum order quantities (MOQ).
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> The biggest O2C bottleneck is "Order Holds". If an order is held for credit or missing data, nobody gets paid. As a BA, your job is to automate as much validation as possible at the point of entry so that orders flow straight through to fulfillment without human intervention.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA Sales (SD):** The global benchmark for complex order orchestration and pricing.
+*   **Oracle NetSuite:** Popular with mid-market companies for its integrated order-to-finance visibility.

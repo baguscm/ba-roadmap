@@ -4,58 +4,152 @@
   "nodes": [
     {
       "id": "inbound-logistics",
-      "data": { "label": "Inbound Logistics" },
-      "position": { "x": 100, "y": 50 }
+      "data": {
+        "label": "Inbound Logistics",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 50
+      }
     },
     {
       "id": "procurement-planning",
-      "data": { "label": "Procurement Planning", "type": "sub" },
-      "position": { "x": 450, "y": 0 }
+      "data": {
+        "label": "Procurement Planning",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 0
+      }
     },
     {
       "id": "supplier-performance",
-      "data": { "label": "Supplier Performance", "type": "sub" },
-      "position": { "x": 450, "y": 70 }
+      "data": {
+        "label": "Supplier Performance",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 70
+      }
     },
     {
       "id": "warehouse-mgt",
-      "data": { "label": "Warehouse Management (WMS)" },
-      "position": { "x": 100, "y": 250 }
+      "data": {
+        "label": "Warehouse Management (WMS)",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 250
+      }
     },
     {
       "id": "inventory-optimization",
-      "data": { "label": "Inventory Optimization", "type": "sub" },
-      "position": { "x": 450, "y": 210 }
+      "data": {
+        "label": "Inventory Optimization",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 210
+      }
     },
     {
       "id": "picking-packing",
-      "data": { "label": "Picking & Packing", "type": "sub" },
-      "position": { "x": 450, "y": 280 }
+      "data": {
+        "label": "Picking & Packing",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 280
+      }
     },
     {
       "id": "outbound-logistics",
-      "data": { "label": "Outbound & Distribution" },
-      "position": { "x": 100, "y": 450 }
+      "data": {
+        "label": "Outbound & Distribution",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 450
+      }
     },
     {
       "id": "tms-integration",
-      "data": { "label": "TMS & Carrier Mgt", "type": "sub" },
-      "position": { "x": 450, "y": 410 }
+      "data": {
+        "label": "TMS & Carrier Mgt",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 410
+      }
     },
     {
       "id": "last-mile-tracking",
-      "data": { "label": "Last Mile Tracking", "type": "sub" },
-      "position": { "x": 450, "y": 480 }
+      "data": {
+        "label": "Last Mile Tracking",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 480
+      }
     }
   ],
   "edges": [
-    { "id": "e1", "source": "inbound-logistics", "target": "warehouse-mgt", "animated": true },
-    { "id": "e2", "source": "inbound-logistics", "target": "procurement-planning" },
-    { "id": "e3", "source": "inbound-logistics", "target": "supplier-performance" },
-    { "id": "e4", "source": "warehouse-mgt", "target": "outbound-logistics", "animated": true },
-    { "id": "e5", "source": "warehouse-mgt", "target": "inventory-optimization" },
-    { "id": "e6", "source": "warehouse-mgt", "target": "picking-packing" },
-    { "id": "e7", "source": "outbound-logistics", "target": "tms-integration" },
-    { "id": "e8", "source": "outbound-logistics", "target": "last-mile-tracking" }
+    {
+      "id": "e1",
+      "source": "inbound-logistics",
+      "target": "warehouse-mgt",
+      "animated": true
+    },
+    {
+      "id": "e2",
+      "source": "inbound-logistics",
+      "target": "procurement-planning"
+    },
+    {
+      "id": "e3",
+      "source": "inbound-logistics",
+      "target": "supplier-performance"
+    },
+    {
+      "id": "e4",
+      "source": "warehouse-mgt",
+      "target": "outbound-logistics",
+      "animated": true
+    },
+    {
+      "id": "e5",
+      "source": "warehouse-mgt",
+      "target": "inventory-optimization"
+    },
+    {
+      "id": "e6",
+      "source": "warehouse-mgt",
+      "target": "picking-packing"
+    },
+    {
+      "id": "e7",
+      "source": "outbound-logistics",
+      "target": "tms-integration"
+    },
+    {
+      "id": "e8",
+      "source": "outbound-logistics",
+      "target": "last-mile-tracking"
+    }
   ]
 }

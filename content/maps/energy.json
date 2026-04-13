@@ -4,40 +4,101 @@
   "nodes": [
     {
       "id": "generation-mgt",
-      "data": { "label": "Energy Generation Mgt" },
-      "position": { "x": 100, "y": 50 }
+      "data": {
+        "label": "Energy Generation Mgt",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 50
+      }
     },
     {
       "id": "renewables-integration",
-      "data": { "label": "Renewables Integration", "type": "sub" },
-      "position": { "x": 450, "y": 0 }
+      "data": {
+        "label": "Renewables Integration",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 0
+      }
     },
     {
       "id": "grid-operations",
-      "data": { "label": "Smart Grid Operations" },
-      "position": { "x": 100, "y": 250 }
+      "data": {
+        "label": "Smart Grid Operations",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 250
+      }
     },
     {
       "id": "asset-maintenance-energy",
-      "data": { "label": "Asset Maintenance (EAM)", "type": "sub" },
-      "position": { "x": 450, "y": 210 }
+      "data": {
+        "label": "Asset Maintenance (EAM)",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 210
+      }
     },
     {
       "id": "customer-billing-utilities",
-      "data": { "label": "Customer Billing & CIS" },
-      "position": { "x": 100, "y": 450 }
+      "data": {
+        "label": "Customer Billing & CIS",
+        "level": "basic"
+      },
+      "position": {
+        "x": 100,
+        "y": 450
+      }
     },
     {
       "id": "demand-response",
-      "data": { "label": "Demand Response Mgt", "type": "sub" },
-      "position": { "x": 450, "y": 410 }
+      "data": {
+        "label": "Demand Response Mgt",
+        "type": "sub",
+        "level": "basic"
+      },
+      "position": {
+        "x": 450,
+        "y": 410
+      }
     }
   ],
   "edges": [
-    { "id": "e1", "source": "generation-mgt", "target": "grid-operations", "animated": true },
-    { "id": "e2", "source": "generation-mgt", "target": "renewables-integration" },
-    { "id": "e3", "source": "grid-operations", "target": "customer-billing-utilities", "animated": true },
-    { "id": "e4", "source": "grid-operations", "target": "asset-maintenance-energy" },
-    { "id": "e5", "source": "customer-billing-utilities", "target": "demand-response" }
+    {
+      "id": "e1",
+      "source": "generation-mgt",
+      "target": "grid-operations",
+      "animated": true
+    },
+    {
+      "id": "e2",
+      "source": "generation-mgt",
+      "target": "renewables-integration"
+    },
+    {
+      "id": "e3",
+      "source": "grid-operations",
+      "target": "customer-billing-utilities",
+      "animated": true
+    },
+    {
+      "id": "e4",
+      "source": "grid-operations",
+      "target": "asset-maintenance-energy"
+    },
+    {
+      "id": "e5",
+      "source": "customer-billing-utilities",
+      "target": "demand-response"
+    }
   ]
 }

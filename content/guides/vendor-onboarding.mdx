@@ -1,0 +1,46 @@
+---
+title: Vendor Onboarding
+domain: p2p-basic
+---
+
+# Vendor Onboarding
+
+In the **Procure to Pay (P2P)** cycle, the **Vendor Master** is the single source of truth for all external suppliers. **Vendor Onboarding** is the process of vetting, registering, and enabling a new partnership to ensure financial and legal compliance.
+
+## Node Knowledge: The Supplier Lifecycle
+1. **Qualification:** Verifying if the supplier meets quality and sustainability benchmarks.
+2. **Data Collection:** Capturing W-9 forms (US), VAT/Tax certificates, and diversity status.
+3. **Banking Verification:** Ensuring bank account details are authenticated to prevent fraud.
+4. **Contract/NDA:** Anchoring the relationship with legal terms and conditions.
+
+<DeliverableChecklist
+  id="vendor-onboarding-basics"
+  items="Supplier Registration Portal Design | W-9 / Tax ID Validation Workflow | Bank Account Ownership Proof (Canceled Check/Letter) | Vendor Category Tree (Commodity Codes) | Conflict of Interest Disclosure Form"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Risk Analysis:** Assessing the financial stability and reputational risk of a new vendor.
+*   **Requirements Analysis:** Defining the "Mandatory Document" list for different vendor types (e.g., Service provider vs. Component manufacturer).
+
+## Typical Deliverables
+
+*   **Vendor Request Form:** The internal document used to initiate the onboarding of a new supplier.
+*   **Master Data Definition:** Specifying which fields (Payment terms, Currency, Incoterms) are required for ERP setup.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Fraud lives in the Vendor Master. An unauthorized change to a bank account field can result in millions in losses. Your BA requirements must include "Segregation of Duties" (SoD) and "Dual Control" (Four-eyes principle) for any changes to sensitive vendor payment data.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP Ariba / SLP:** Specifically designed for large-scale enterprise supplier lifecycle and performance management.
+*   **Coupa:** A modern, user-friendly platform that simplifies supplier onboarding and risk management.

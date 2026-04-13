@@ -1,0 +1,46 @@
+---
+title: Requisition & Approval
+domain: hr-recruit
+---
+
+# Requisition & Approval
+
+The **Recruit to Onboard** lifecycle begins with **Requisition & Approval**. This is the process of formalizing the need for a new hire, ensuring it aligns with the company's headcount budget, and securing the necessary executive sign-offs before the role is advertised.
+
+## Node Knowledge: The Headcount Trigger
+1. **Position Management:** Defining the job profile, grade, salary range, and reporting structure.
+2. **Headcount Budgeting:** Verifying if the role is a "Replacement" (budgeted) or "New Growth" (incremental).
+3. **Justification:** Documenting the business case for adding the resource.
+4. **Multi-level Approval:** Routing the request through Department Heads, Finance, and HR Business Partners.
+
+<DeliverableChecklist
+  id="requisition-approval-hr"
+  items="Job Description (JD) Master Library | Headcount Budget Authorization Matrix | Requisition Approval Workflow (SLA-based) | Position ID Creation logic in HRIS | Cost Center & Org Unit Allocation Policy"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing the total cost of hire (including benefits and overhead) against the available budget.
+*   **Requirements Modeling:** ensuring that the mandatory data fields for a new requisition (e.g., Remote status, Essential skills) are standardized for the Applicant Tracking System (ATS).
+
+## Typical Deliverables
+
+*   **Approval Workflow Map:** showing the sequence of sign-offs required based on the role's seniority or salary.
+*   **Requisition System Spec:** Detailing the integration between the Budgeting system and the Recruiting system.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Requisition bottlenecks usually happen in Finance. If your Finance team doesn't have real-time visibility into "Vacant Headcount", they will block recruiters from hiring, causing the business to lose talent. As a BA, your goal is to bridge the gap between HR and Finance by ensuring they share a single "Position Management" database.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **Workday Recruiting:** Features a seamless "Position Management" to "Requisition" flow that is natively integrated with financial budgeting.
+*   **SAP SuccessFactors Employee Central:** A leader in global position management and automated headcount control.

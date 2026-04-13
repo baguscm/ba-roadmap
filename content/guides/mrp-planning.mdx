@@ -1,0 +1,47 @@
+---
+title: MRP & Materials Planning
+domain: plan-to-produce
+---
+
+# MRP & Materials Planning
+
+**Materials Requirement Planning (MRP)** is the engine of manufacturing. It calculates exactly what ingredients (raw materials) and components are needed, in what quantity, and by when, to meet the finished goods production schedule.
+
+## Node Knowledge: The Supply Calculation
+1. **Master Production Schedule (MPS):** The "statement of intent"—what finished goods we plan to build.
+2. **Bill of Materials (BOM):** The "recipe"—a structured list of every component needed for one unit.
+3. **Inventory Status:** Real-time visibility into on-hand, on-order, and reserved stock.
+4. **Lead Times:** Calculating the time required to procure or manufacture each component.
+5. **MRP Run:** The automated calculation that generates "Planned Orders" (for production) and "Purchase Requisitions" (for procurement).
+
+<DeliverableChecklist
+  id="mrp-planning-basics"
+  items="Master Production Schedule (MPS) Framework | Bill of Materials (BOM) Accuracy Audit | MRP Parameter Configuration (Safety Stock, Lot Size) | Lead Time Offset Matrix | Exception Message Response Workflow"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Requirements Analysis:** Defining the "Lot Sizing" rules—for example, do we buy exactly what we need, or in bulk quantities to get discounts?
+*   **Solution Evaluation:** Analyzing the accuracy of the inventory data—if the system thinks we have stock that isn't really there, MRP will fail.
+
+## Typical Deliverables
+
+*   **BOM Structure Map:** A visual hierarchy of finished goods down to raw materials.
+*   **MRP Exception Guide:** A desk procedure for planners to handle system flags (e.g., "Cancel Order", "Reschedule-In").
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Garbage in, garbage out. The success of MRP depends 100% on two numbers: **BOM Accuracy** and **Inventory Accuracy**. If your BOM says you need 5 screws but the product needs 6, or if the system says you have 100 screws but you only have 80, your production line will stop. As a BA, focus your efforts on the "Cycle Counting" and "BOM Governance" processes first.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Production Planning - PP):** Features the legendary MRP Live engine for real-time requirement calculation.
+*   **Oracle Manufacturing Cloud:** A robust solution for coordinating complex multi-level BOMs and material flows.

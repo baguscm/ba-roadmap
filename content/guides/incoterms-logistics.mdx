@@ -1,0 +1,46 @@
+---
+title: Incoterms & Freight Liability
+domain: p2p-import
+---
+
+# Incoterms & Freight Liability
+
+In **Advanced P2P with Import**, **Incoterms** (International Commercial Terms) are the legal "DNA" of a purchase. They define the exact moment when the risk and the cost of the goods transfer from the seller to the buyer during international transit.
+
+## Node Knowledge: The Risk Boundary
+1. **Incoterms Definition:** Standard rules (e.g., EXW, FOB, CIF, DDP) published by the International Chamber of Commerce (ICC).
+2. **Transfer of Risk:** Identifying the physical point (e.g., "Loaded on Vessel") where the buyer becomes responsible if the goods are lost or damaged.
+3. **Transfer of Cost:** Identifying who pays for freight, insurance, and customs duties.
+4. **Freight Booking:** The operational process of securing space on a ship or airplane via a Freight Forwarder.
+
+<DeliverableChecklist
+  id="incoterms-advanced"
+  items="Incoterms 2020 Decision Matrix | Freight Cost Allocation Logic in ERP | Insurance Coverage Requirement Specification | Freight Forwarder SLA (Service Level Agreement) | Landed Cost Calculation Table"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Financial Analysis:** Analyzing "Landed Cost"—ensuring the company understands the *total* cost of an item including freight and duty, not just the PO price.
+*   **Requirements Validation:** ensuring that the "Incoterms" field in the ERP is mandatory and correctly mapped to the insurance and accounting engines.
+
+## Typical Deliverables
+
+*   **Incoterms Selection Guide:** An internal desk-level procedure for buyers to choose the right risk-balanced term.
+*   **Landed Cost Component Map:** Showing every fee (Port charges, Fuel surcharges, Duty) that adds to the base item cost.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Beware of "FOB" (Free On Board). Many buyers assume it means they own the goods once they leave the factory. It actually means ownership transfers once they are *on the ship*. If the factory burns down with your finished goods inside, and you used FOB, the loss is the vendor's, not yours. As a BA, ensure your "Inventory Valuation" logic matches your legal Incoterms.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP S/4HANA (Global Trade Services):** Automatically calculates "Landed Cost" estimates based on Incoterms and historical freight rates.
+*   **CargoWise One:** A specialized, industry-leading platform for freight forwarders and huge global shippers to track risk and liability across the supply chain.

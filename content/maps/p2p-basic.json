@@ -1,0 +1,37 @@
+{
+  "id": "p2p-basic",
+  "name": "Procure to Pay (Basic)",
+  "nodes": [
+    {
+      "id": "vendor-master",
+      "data": { "label": "Vendor Master", "level": "basic" },
+      "position": { "x": 100, "y": 0 }
+    },
+    {
+      "id": "requisition",
+      "data": { "label": "Purchase Requisition", "level": "basic" },
+      "position": { "x": 100, "y": 150 }
+    },
+    {
+      "id": "po",
+      "data": { "label": "Purchase Order", "level": "basic" },
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "gr",
+      "data": { "label": "Goods Receipt", "level": "basic" },
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "ap",
+      "data": { "label": "A/P & Payment", "level": "basic" },
+      "position": { "x": 100, "y": 600 }
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "vendor-master", "target": "requisition", "animated": true },
+    { "id": "e2", "source": "requisition", "target": "po", "animated": true },
+    { "id": "e3", "source": "po", "target": "gr", "animated": true },
+    { "id": "e4", "source": "gr", "target": "ap", "animated": true }
+  ]
+}

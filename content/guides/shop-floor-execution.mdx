@@ -1,0 +1,47 @@
+---
+title: Shop Floor Execution
+domain: plan-to-produce
+---
+
+# Shop Floor Execution
+
+**Shop Floor Execution** is where the plan becomes physical reality. It involves the coordination of labor, materials, and machines to convert manufacturing orders into finished goods while capturing real-time progress data for the ERP.
+
+## Node Knowledge: The Production Pulse
+1. **Production Orders:** The legal authority to manufacture a specific quantity on a specific date.
+2. **Material Staging:** Bringing the raw materials from the warehouse to the production line.
+3. **Goods Issue (GI):** Recording the consumption of raw materials against the order.
+4. **Operations Confirmation:** Reporting the actual labor hours and machine time spent on each step.
+5. **Goods Receipt (GR):** Putting the finished product into inventory once production is complete.
+
+<DeliverableChecklist
+  id="shop-floor-basics"
+  items="Production Order Layout (Job Traveler) | Material Picking List Logic | Operational Confirmation Workflow | Downtime & Scrap Reason Codes | Real-time Analytics Dashboard (OEE)"
+/>
+
+---
+
+## Key BA Activities (BABOK® Alignment)
+
+*   **Process Analysis:** Identifying "Non-Value Added" activities on the shop floor (e.g., employees waiting for materials).
+*   **Requirements Validation:** Ensuring the "Shop Floor User Interface" (MES) is simple enough for operators to use while wearing gloves or in a loud environment.
+
+## Typical Deliverables
+
+*   **Execution Workflow:** showing the steps from Order Release -> Staging -> Consumption -> Confirmation -> Receipt.
+*   **Scrap Mapping:** Detailing how lost material is accounted for financially.
+
+---
+
+## 💡 Expert BA Review
+
+> [!TIP]
+> **From the Desk of a Lead Business Analyst**
+> Minimize "Paper on the Floor". If operators are writing their time down on slips of paper to be entered by a clerk later, your data is already 24 hours old. Your goal as a BA is to implement "Point-of-Action" data capture—using tablets, barcodes, or IoT sensors to get real-time feedback on production status.
+
+---
+
+## Enterprise Software Implementation Reference
+
+*   **SAP Digital Manufacturing Cloud (DMC):** A cloud-native Manufacturing Execution System (MES) that bridges the gap between the shop floor and SAP S/4HANA.
+*   **Plex Smart Manufacturing Platform:** A leading MES/ERP solution built specifically for high-volume automotive and industrial shop floors.

@@ -17,14 +17,22 @@ import 'reactflow/dist/style.css';
 import CustomNode from './CustomNode';
 import SubNode from './SubNode';
 import { useProgress } from '@/hooks/useProgress';
+import { Legend } from './Legend';
 
-export default function RoadmapCanvas({ domainId, initialNodes, initialEdges }: { domainId: string, initialNodes: Node[], initialEdges: Edge[] }) {
+export default function RoadmapCanvas({ domainId, initialNodes, initialEdges, showLegend = false }: { domainId: string, initialNodes: Node[], initialEdges: Edge[], showLegend?: boolean }) {
   const router = useRouter();
   const { completedNodes } = useProgress(domainId);
   const nodeTypes: NodeTypes = useMemo(() => ({ custom: CustomNode, sub: SubNode }), []);
   
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  // Calculate dynamic content height
+  const contentHeight = useMemo(() => {
+    if (!initialNodes || initialNodes.length === 0) return 600;
+    const maxY = Math.max(...initialNodes.map(n => n.position.y));
+    return Math.max(maxY + 400, 600); // Increased padding to allow more vertical room for zooming
+  }, [initialNodes]);
 
   // Enhance nodes with completed state dynamically
   useEffect(() => {
@@ -47,7 +55,7 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges }: 
   }, [router]);
 
   return (
-    <div className="w-full border border-node-border rounded-xl shadow-sm bg-background" style={{ height: '2300px' }}>
+    <div className="w-full border border-node-border rounded-xl shadow-sm bg-background overflow-hidden" style={{ height: `${contentHeight}px` }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -62,10 +70,18 @@ export default function RoadmapCanvas({ domainId, initialNodes, initialEdges }: 
         panOnDrag={false}
         zoomOnDoubleClick={false}
         preventScrolling={false}
-        defaultViewport={{ x: 50, y: 50, zoom: 1.3 }}
         className="bg-background/50 pointer-events-auto"
+        fitView
+        fitViewOptions={{ 
+          padding: 0.1,
+          minZoom: 0.9,
+          maxZoom: 1.1
+        }}
+        minZoom={0.5}
+        maxZoom={1.5}
       >
         <Background color="#ccc" gap={16} />
+        {showLegend && <Legend />}
       </ReactFlow>
     </div>
   );
